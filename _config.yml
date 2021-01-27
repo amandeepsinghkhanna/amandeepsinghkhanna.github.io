@@ -1,6 +1,7 @@
 title: Amandeep Singh Khanna
 baseurl: ""
 url: "amandeepsinghkhanna.com"
+google_analytics: G-PYQ4ZZQ3QD
 
 markdown: kramdown
 include:
@@ -12,3 +13,7 @@ sass:
 
 plugins:
   - jekyll-paginate
+
+# Permalinks
+permalink:      /:title/:year-:month-:day/
+paginate:       10
