@@ -120,9 +120,11 @@ permalink: /about/
 
     <div class="contact-section">
       <div class="row">
-        <button type="button" name="download_cv" id="download-btn">
-          Download Resume
-        </button>
+        <form method="get" action="{{"/" | relative_url}}_files/resume/Amandeep Singh Khanna - Resume.pdf"/>
+          <button type="submit" name="download_cv" id="download-btn">
+            Download Resume
+          </button>
+        </form>
         <div id="whitespace"></div>
         <div class="row">
           <a href="mailto:amandeepsinghkhanna@gmail.com" class="social-link">
