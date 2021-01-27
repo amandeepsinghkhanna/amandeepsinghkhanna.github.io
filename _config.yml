@@ -8,12 +8,12 @@ include:
   - _pages
 
 sass:
-  sass_dir:     _sass
-  style:        compressed
+  sass_dir: _sass
+  style: compressed
 
 plugins:
   - jekyll-paginate
 
 # Permalinks
-permalink:      /:title/:year-:month-:day/
-paginate:       10
+permalink: /:categories/:title/:year-:month-:day/
+paginate: 10
