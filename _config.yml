@@ -1,0 +1,14 @@
+title: Amandeep Khanna
+baseurl: ""
+url: "amandeepsinghkhanna.com"
+
+markdown: kramdown
+include:
+  - _pages
+
+sass:
+  sass_dir:     _sass
+  style:        compressed
+
+plugins:
+  - jekyll-paginate
