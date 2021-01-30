@@ -108,6 +108,9 @@ permalink: /about/
   }
 </style>
 
+<script type="text/javascript" src="{{ "/assets/js/paginator.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/table.js" | relative_url }}"></script>
+
 <div class="row">
   <img id="resume-profile-img" src="{{ "/" | relative_url  }}assets/images/site/resume_profile.JPG"/>
   <div id="resume-description">
@@ -320,3 +323,33 @@ permalink: /about/
   </div>
 </div>
 <br/>
+
+<h1 class="post-title">Courses & Certifications</h1>
+<div class="post-line"></div>
+
+<div class="row">
+  <ul id="list">
+    <li>
+      <a href="#">Hacker Rank - Python(Intermediate) Assessment</a>
+      <p>11th-Sept-2020</p>
+    </li>
+    <li>
+      <a href="#">Hacker Rank - Python(Basic) Assessment</a>
+      <p>9th-Sept-2020</p>
+    </li>
+  </ul>
+</div>
+
+<div id="list_index" class="box"></div>
+<script type="text/javascript">
+window.addEventListener("load", function () {
+   paginator({
+       get_rows: function () {
+           return document.getElementById("list").getElementsByTagName("li");
+       },
+       box: document.getElementById("list_index"),
+       active_class: "color_page"
+   });
+}, false);
+
+</script>

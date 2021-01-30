@@ -1,7 +1,7 @@
 title: Amandeep Singh Khanna
 baseurl: ""
 url: "amandeepsinghkhanna.com"
-google_analytics: G-PYQ4ZZQ3QD # UA—XXXXXXXX-X
+google_analytics: G-PYQ4ZZQ3QD
 
 markdown: kramdown
 include:
@@ -15,5 +15,19 @@ plugins:
   - jekyll-paginate
 
 # Permalinks
-permalink: /:categories/:title/:year-:month-:day/
+permalink: /:title/:year-:month-:day/
 paginate: 10
+
+collections:
+  recipes:
+    output: true
+    sort_by: recipe_count
+    permalink: /:collection/:name/
+  projects:
+    output: true
+    sort_by: project_count
+    permalink: /:collection/:name/
+  songbook:
+    output: true
+    sort_by: song_count
+    permalink: /:collection/:name/
