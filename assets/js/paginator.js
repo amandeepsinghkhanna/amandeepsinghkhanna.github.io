@@ -93,7 +93,7 @@ function paginator(config) {
         if (typeof selects != "undefined" && (selects.length > 0 && typeof selects[0].selectedIndex != "undefined")) {
             config.rows_per_page = selects[0].options[selects[0].selectedIndex].value;
         } else {
-            config.rows_per_page = 10;
+            config.rows_per_page = 5;
         }
     }
     var rows_per_page = config.rows_per_page;
@@ -118,7 +118,7 @@ function paginator(config) {
         page = 1;
     }
     config.page = page;
- 
+
     // hide rows not on current page and show the rows that are
     for (var i=0;i<trs.length;i++) {
         if (typeof trs[i]["data-display"] == "undefined") {
@@ -226,41 +226,41 @@ function paginator(config) {
         }
     }
 
-    // make rows per page selector
-    if (!(typeof config.page_options == "boolean" && !config.page_options)) {
-        if (typeof config.page_options == "undefined") {
-            config.page_options = [
-                { value: 5,  text: '5'   },
-                { value: 10, text: '10'  },
-                { value: 20, text: '20'  },
-                { value: 50, text: '50'  },
-                { value: 100,text: '100' },
-                { value: 0,  text: 'All' }
-            ];
-        }
-        var options = config.page_options;
-        var select = document.createElement("select");
-        for (var i=0;i<options.length;i++) {
-            var o = document.createElement("option");
-            o.value = options[i].value;
-            o.text = options[i].text;
-            select.appendChild(o);
-        }
-        select.value = rows_per_page;
-        select.addEventListener("change", function () {
-            config.rows_per_page = this.value;
-            paginator(config);
-        }, false);
-        box.appendChild(select);
-    }
+    // // make rows per page selector
+    // if (!(typeof config.page_options == "boolean" && !config.page_options)) {
+    //     if (typeof config.page_options == "undefined") {
+    //         config.page_options = [
+    //             { value: 5,  text: '5'   },
+    //             { value: 10, text: '10'  },
+    //             { value: 20, text: '20'  },
+    //             { value: 50, text: '50'  },
+    //             { value: 100,text: '100' },
+    //             { value: 0,  text: 'All' }
+    //         ];
+    //     }
+    //     var options = config.page_options;
+    //     var select = document.createElement("select");
+    //     for (var i=0;i<options.length;i++) {
+    //         var o = document.createElement("option");
+    //         o.value = options[i].value;
+    //         o.text = options[i].text;
+    //         select.appendChild(o);
+    //     }
+    //     select.value = rows_per_page;
+    //     select.addEventListener("change", function () {
+    //         config.rows_per_page = this.value;
+    //         paginator(config);
+    //     }, false);
+    //     box.appendChild(select);
+    // }
 
     // status message
-    var stat = document.createElement("span");
-    stat.innerHTML = "On page " + page + " of " + pages
-        + ", showing rows " + (((page-1)*rows_per_page)+1)
-        + " to " + (trs.length<page*rows_per_page||rows_per_page==0?trs.length:page*rows_per_page)
-        + " of " + trs.length;
-    box.appendChild(stat);
+    // var stat = document.createElement("span");
+    // stat.innerHTML = "On page " + page + " of " + pages
+    //     + ", showing rows " + (((page-1)*rows_per_page)+1)
+    //     + " to " + (trs.length<page*rows_per_page||rows_per_page==0?trs.length:page*rows_per_page)
+    //     + " of " + trs.length;
+    // box.appendChild(stat);
 
     // hide pagination if disabled
     if (config.disable) {
