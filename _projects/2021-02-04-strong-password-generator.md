@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Strong Password Manager"
+title: "Strong Password Generator"
 author: "Amandeep Singh Khanna"
 pulishing_date: "2020-02-05"
 ---
