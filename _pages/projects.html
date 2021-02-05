@@ -1,18 +1,28 @@
 ---
-layout: default
+layout: home
 title: "Projects"
 permalink: /projects/
 ---
-
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 450px;
-    text-align: center;
+<style>
+  #list{
+    list-style-type: none;
   }
 </style>
-
-<br/>
-<div class="container">
-  <img id="404image" src="{{ "/" | relative_url  }}assets/images/site/kanban_board.png"/>
+<div class="catalogue">
+  <ul id="list">
+    {% for project in site.projects %}
+    <li>
+      <a href="{{ project.url | prepend: site.baseurl }}" class="catalogue-item">
+        <div>
+          <time datetime="{{ project.date }}" class="catalogue-time">{{ project.date | date: "%B %d, %Y" }}</time>
+          <h1 class="catalogue-title">{{ project.title}}</h1>
+          <div class="catalogue-line"></div>
+          <p>
+            {{ project.content | strip_html | truncatewords: 30 }}
+          </p>
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
 </div>
