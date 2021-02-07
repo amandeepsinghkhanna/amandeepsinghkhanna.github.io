@@ -11,7 +11,7 @@ permalink: /projects/
 <script type="text/javascript" src="{{ "/assets/js/paginator.js" | relative_url }}"></script>
 <div class="catalogue">
   <ul id="list">
-    {% for project in site.projects %}
+    {% for project in site.projects reversed %}
     <li>
       <a href="{{ project.url | prepend: site.baseurl }}" class="catalogue-item">
         <div>
