@@ -1,5 +1,6 @@
 ---
 layout: post
+html_page_title: "My Notes from learning TensorFlow 2.0"
 title: "My Notes from learning TensorFlow 2.0"
 author: "Amandeep Singh Khanna"
 ---
