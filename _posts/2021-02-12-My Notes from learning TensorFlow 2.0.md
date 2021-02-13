@@ -77,8 +77,8 @@ Rank or the degree of tensors is the number of dimensions involved in the tensor
 </div>
 
 ```python
-rank1_tensor = tf.Variable(["Test"], tf.string)
-rank2_tensor = tf.Variable([["test", "ok"], ["test", "yes"]], tf.string)
+rank1_tensor=tf.Variable(["Test"],tf.string)
+rank2_tensor=tf.Variable([["test", "ok"],["test", "yes"]],tf.string)
 print(tf.rank(rank2_tensor)) # Checking the rank of a tensor.
 ```
 <div style="text-align: justify">
