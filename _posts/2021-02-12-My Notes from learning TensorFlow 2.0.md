@@ -45,9 +45,9 @@ Tensors are a multi-dimensional arrays with a uniform type (called a **dtype**).
 
 To create a tensor, you defined the value of the tensor and the data-type.
 ```python
-string = tf.Variable("this is a string", tf.string)
-number = tf.Variable(324, tf.int16)
-floating = tf.Variable(3.567, tf.float64)
+string=tf.Variable("this is a string",tf.string)
+number=tf.Variable(324,tf.int16)
+floating=tf.Variable(3.567,tf.float64)
 ```
 
 <br/>
