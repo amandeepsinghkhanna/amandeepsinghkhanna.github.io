@@ -83,24 +83,28 @@ floating = tf.Variable(3.567, tf.float64)
 #### Rank / Degree of Tensors:
 <div style="text-align: justify">
 Rank or the degree of tensors is the number of dimensions involved in the tensor. The above created tensor is of rank 0, which is also known as a scalar. Defining a tensor of higher dimensions.
+</div>
 
 ```python
 rank1_tensor = tf.Variable(["Test"], tf.string)
 rank2_tensor = tf.Variable([["test", "ok"], ["test", "yes"]], tf.string)
 print(tf.rank(rank2_tensor)) # Checking the rank of a tensor.
 ```
-The rank of a tensor is directly related to the level of nested lists. The rank of the variable rank1_tensor is 1 as the deepest level of nesting is 1 and rank2_tensor is 2 as the deepest level of nesting 2.
 
+<div style="text-align: justify">
+The rank of a tensor is directly related to the level of nested lists. The rank of the variable rank1_tensor is 1 as the deepest level of nesting is 1 and rank2_tensor is 2 as the deepest level of nesting 2.
 </div>
+
 
 #### Shape of a Tensor:
 <div style="text-align: justify">
 Shape of the tensor is the number of elements that exist in each dimension of the tensor.
+</div>
 
 ```python
 rank2_tensor.shape
 ```
-</div>
+
 
 #### Changing the shape of a Tensor:
 <div style="text-align: justify">
