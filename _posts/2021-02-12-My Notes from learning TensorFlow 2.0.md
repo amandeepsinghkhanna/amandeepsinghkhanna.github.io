@@ -45,9 +45,9 @@ Tensors are a multi-dimensional arrays with a uniform type (called a **dtype**).
 
 To create a tensor, you defined the value of the tensor and the data-type.
 ```python
-string=tf.Variable("this is a string",tf.string)
-number=tf.Variable(324,tf.int16)
-floating=tf.Variable(3.567,tf.float64)
+string = tf.Variable("this is a string", tf.string)
+number = tf.Variable(324, tf.int16)
+floating = tf.Variable(3.567, tf.float64)
 ```
 
 <br/>
@@ -83,27 +83,24 @@ floating=tf.Variable(3.567,tf.float64)
 #### Rank / Degree of Tensors:
 <div style="text-align: justify">
 Rank or the degree of tensors is the number of dimensions involved in the tensor. The above created tensor is of rank 0, which is also known as a scalar. Defining a tensor of higher dimensions.
-</div>
 
 ```python
-rank1_tensor=tf.Variable(["Test"],tf.string)
-rank2_tensor=tf.Variable([["test", "ok"],["test", "yes"]],tf.string)
+rank1_tensor = tf.Variable(["Test"], tf.string)
+rank2_tensor = tf.Variable([["test", "ok"], ["test", "yes"]], tf.string)
 print(tf.rank(rank2_tensor)) # Checking the rank of a tensor.
 ```
-<div style="text-align: justify">
 The rank of a tensor is directly related to the level of nested lists. The rank of the variable rank1_tensor is 1 as the deepest level of nesting is 1 and rank2_tensor is 2 as the deepest level of nesting 2.
-</div>
 
+</div>
 
 #### Shape of a Tensor:
 <div style="text-align: justify">
 Shape of the tensor is the number of elements that exist in each dimension of the tensor.
-</div>
 
 ```python
 rank2_tensor.shape
 ```
-
+</div>
 
 #### Changing the shape of a Tensor:
 <div style="text-align: justify">
@@ -111,11 +108,11 @@ The number of elements of a tensor is the product of the sizes of all its shapes
 </div>
 
 ```python
-tensor1=tf.ones([1,2,3]) # tf.ones() creates a shape [1,2,3] tensor full of ones
-tensor2=tf.reshape(tensor1,[2,3,1]) # reshape existing data to shape [2,3,1]
-tensor3=tf.reshape(tensor2,[3, -1]) # -1 tells the tensor to calculate the size of the dimension in that place
+tensor1 = tf.ones([1,2,3]) # tf.ones() creates a shape [1,2,3] tensor full of ones
+tensor2 = tf.reshape(tensor1, [2,3,1]) # reshape existing data to shape [2,3,1]
+tensor3 = tf.reshape(tensor2, [3, -1]) # -1 tells the tensor to calculate the size of the dimension in that place
 # this will reshape the tensor to [3,3]
-# The number of elements in the reshaped tensor MUST match the number in the original
+# The numer of elements in the reshaped tensor MUST match the number in the original
 ```
 
 #### Slicing Tensors:
@@ -175,9 +172,9 @@ In the next step we will be reading the training and test data. We're using the 
 <a href="https://www.kaggle.com/c/titanic">here</a>
 
 ```python
-train = pd.read_csv("train.csv") # Reading the training dataset.
-test = pd.read_csv("test.csv") # Reading the test dataset.
-target = train["Survived"] # Creating a pandas series object with the contents of the target variable.
+train_df = pd.read_csv("train.csv") # Reading the training dataset.
+test_df = pd.read_csv("test.csv") # Reading the test dataset.
+target = train_df["Survived"] # Creating a pandas series object with the contents of the target variable.
 ```
 
 In our dataset, we have both categorical as well as continuous variables. For encoding the categorical data and identifying the numerical columns, TensorFlow has a built-in method. To be able to use any kind of data with TensorFlow we will need to convert them into tensors.
@@ -193,10 +190,10 @@ CATEGORICAL_COLUMNS = [
     "embark_town",
     "alone",
 ]  # Names of categorical columns
-NUMERIC_COLUMNS = ["age", "fare"]  # Names of continuous columns
+NUMERIC_COLUMNS = ["age", "fare"]  # Names of continous columns
 feature_columns = []
 for feature_name in CATEGORICAL_COLUMNS:
-    vocabulary = train[
+    vocabulary = train_df[
         feature_name
     ].unique()  # gets a list of all unique values from given feature column
     # encoding the categorical variables and converting them to tensors:
@@ -216,9 +213,9 @@ for feature_name in NUMERIC_COLUMNS:
 At this point we need to perform one more step to get our data prepared for training the model. The dataset is fed into the model as a stream of small batches. The most common batch size is 32. We will feed these batches into our model multiple times according to the number of <b>epochs</b>. An epoch is the collection of batches that make up the entire dataset. For example, if we set the number of epochs as 50, we will have the entire dataset passing through the neural network 50 times, with the dataset being broken down into smaller batches of 32 row at a time. The TensorFlow models require the dataset to be passed in the <code>tf.data.Dataset</code> object.
 </div>
 
-#### Creating a user-defined function to convert the dataset into the required format for the TensorFlow model:
+#### A User-defined function to convert the dataset into the required format for training the TensorFlow model:
 
-```python
+````python
 def prepare_model_input(
 	dataset, # Input dataset as pandas.core.DataFrame object
 	target_column, # Tensor representing the target column
@@ -238,4 +235,21 @@ def prepare_model_input(
 	return input_function # Returning the function object for use.
 
 training_input = prepare_model_input(train, target)
-```	
+````
+
+#### Creating and Training the model:
+
+```python
+# Creating the model object:
+linear_model = tf.estimator.LinearClassifier(feature_columns=feature_columns)
+
+# Training the model:
+linear_model.train(train_df)
+
+# Evaluating model metrics:
+model_metrics = linear_model.evaluate(train_df)
+print(model_metrics)
+
+# Making predictions:
+predictions = linear_model.predict(train_df)
+````
