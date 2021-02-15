@@ -193,7 +193,7 @@ CATEGORICAL_COLUMNS = [
     "embark_town",
     "alone",
 ]  # Names of categorical columns
-NUMERIC_COLUMNS = ["age", "fare"]  # Names of continous columns
+NUMERIC_COLUMNS = ["age", "fare"]  # Names of continuous columns
 feature_columns = []
 for feature_name in CATEGORICAL_COLUMNS:
     vocabulary = train[
@@ -213,5 +213,29 @@ for feature_name in NUMERIC_COLUMNS:
 ```
 
 <div style="text-align: justify">
-At this point we need to perform one more step to get our data prepared for training the model. The dataset is fed into the model as a stream of small batches. The most common batch size is 32. We will feed these batches into our model multiple times according to the number of <b>epochs</b>. An epoch is the collection of batches that make up the entire dataset. For example, if we set the number of epochs as 50, we will have the entire dataset passing through the neural network 50 times, with the dataset being broken down into smaller batches of 32 row at a time.
+At this point we need to perform one more step to get our data prepared for training the model. The dataset is fed into the model as a stream of small batches. The most common batch size is 32. We will feed these batches into our model multiple times according to the number of <b>epochs</b>. An epoch is the collection of batches that make up the entire dataset. For example, if we set the number of epochs as 50, we will have the entire dataset passing through the neural network 50 times, with the dataset being broken down into smaller batches of 32 row at a time. The TensorFlow models require the dataset to be passed in the <code>tf.data.Dataset</code> object.
 </div>
+
+#### Creating a user-defined function to convert the dataset into the required format for the TensorFlow model:
+
+```python
+def prepare_model_input(
+	dataset, # Input dataset as pandas.core.DataFrame object
+	target_column, # Tensor representing the target column
+	shuffle = True, # Shuffle the data.
+	no_epochs = 10, # Number of epochs for training the model
+	batch_size = 32 # Size of each batch while training the model
+):
+	def input_function(): # This function will be returned
+		ds = tf.data.Dataset.from_tensor_slices(
+			dict(dataset),
+			target_column
+		)
+		if shuffle == True:
+			ds = ds.shuffle(1000) # Randomize the order of the data
+		ds = ds.batch(batch_size).repeat(no_epochs) # Split the data into batches of 29 and repeat the process for each epoch
+		return ds
+	return input_function # Returning the function object for use.
+
+training_input = prepare_model_input(train, target)
+```	
