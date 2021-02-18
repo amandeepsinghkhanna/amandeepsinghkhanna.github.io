@@ -262,19 +262,3 @@ probs = pd.Series([pred['probabilities'][1] for pred in pred_dicts])
 # Plotting the predicted probabilities:
 probs.plot(kind='hist', bins=20, title='predicted probabilities')
 ````
-
-#### Implementing a Deep Neural Network for a binary classification problem:
-
-````python
-# Building the model object:
-deep_neural_network=tf.estimator.DNNClassifier(
-	feature_columns=feature_columns, # All the columns as a list of tensors
-	hidden_units=[30, 10] # Thne each element in the list corresponds to a hidden layer with the number of number representing the number of neurons
-	n_classes=2 # Number of classes in the target
-)
-
-# Training the Deep Neural Network Classifier:
-deep_neural_network.train(
-
-)
-````
