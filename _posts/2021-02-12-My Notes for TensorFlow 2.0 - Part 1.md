@@ -98,11 +98,12 @@ The rank of a tensor is directly related to the level of nested lists. The rank 
 #### Shape of a Tensor:
 <div style="text-align: justify">
 Shape of the tensor is the number of elements that exist in each dimension of the tensor.
+</div>
 
 ```python
 rank2_tensor.shape
 ```
-</div>
+
 
 #### Changing the shape of a Tensor:
 <div style="text-align: justify">
