@@ -13,6 +13,9 @@ If you want to use this resource for your use, then here are a few pre-requisite
 1. Basic understanding of Machine Learning and Deep Learning algorithms.
 2. Basic knowledge of Python Programming.
 
+# TensorFlow 2.0
+<br/>
+
 #### Installing TensorFlow:
 
 To install the CPU version of TensorFlow:
@@ -45,9 +48,9 @@ Tensors are a multi-dimensional arrays with a uniform type (called a **dtype**).
 
 To create a tensor, you defined the value of the tensor and the data-type.
 ```python
-string=tf.Variable("this is a string",tf.string)
-number=tf.Variable(324,tf.int16)
-floating=tf.Variable(3.567,tf.float64)
+string = tf.Variable("this is a string", tf.string)
+number = tf.Variable(324, tf.int16)
+floating = tf.Variable(3.567, tf.float64)
 ```
 
 <br/>
@@ -83,28 +86,24 @@ floating=tf.Variable(3.567,tf.float64)
 #### Rank / Degree of Tensors:
 <div style="text-align: justify">
 Rank or the degree of tensors is the number of dimensions involved in the tensor. The above created tensor is of rank 0, which is also known as a scalar. Defining a tensor of higher dimensions.
-</div>
 
 ```python
-rank1_tensor=tf.Variable(["Test"],tf.string)
-rank2_tensor=tf.Variable([["test", "ok"], ["test", "yes"]],tf.string)
+rank1_tensor = tf.Variable(["Test"], tf.string)
+rank2_tensor = tf.Variable([["test", "ok"], ["test", "yes"]], tf.string)
 print(tf.rank(rank2_tensor)) # Checking the rank of a tensor.
 ```
-
-<div style="text-align: justify">
 The rank of a tensor is directly related to the level of nested lists. The rank of the variable rank1_tensor is 1 as the deepest level of nesting is 1 and rank2_tensor is 2 as the deepest level of nesting 2.
-</div>
 
+</div>
 
 #### Shape of a Tensor:
 <div style="text-align: justify">
 Shape of the tensor is the number of elements that exist in each dimension of the tensor.
-</div>
 
 ```python
 rank2_tensor.shape
 ```
-
+</div>
 
 #### Changing the shape of a Tensor:
 <div style="text-align: justify">
@@ -112,9 +111,9 @@ The number of elements of a tensor is the product of the sizes of all its shapes
 </div>
 
 ```python
-tensor1=tf.ones([1,2,3]) # tf.ones() creates a shape [1,2,3] tensor full of ones
-tensor2=tf.reshape(tensor1,[2,3,1]) # reshape existing data to shape [2,3,1]
-tensor3=tf.reshape(tensor2,[3, -1]) # -1 tells the tensor to calculate the size of the dimension in that place
+tensor1 = tf.ones([1,2,3]) # tf.ones() creates a shape [1,2,3] tensor full of ones
+tensor2 = tf.reshape(tensor1, [2,3,1]) # reshape existing data to shape [2,3,1]
+tensor3 = tf.reshape(tensor2, [3, -1]) # -1 tells the tensor to calculate the size of the dimension in that place
 # this will reshape the tensor to [3,3]
 # The numer of elements in the reshaped tensor MUST match the number in the original
 ```
@@ -176,9 +175,14 @@ In the next step we will be reading the training and test data. We're using the 
 <a href="https://www.kaggle.com/c/titanic">here</a>
 
 ```python
-train_df = pd.read_csv("train.csv") # Reading the training dataset.
-test_df = pd.read_csv("test.csv") # Reading the test dataset.
-target = train_df["Survived"] # Creating a pandas series object with the contents of the target variable.
+train_df = pd.read_csv("train.csv")  # Reading the training dataset.
+train_df = train_df.dropna()
+target = train_df[
+    "Survived"
+]  # Creating a pandas series object with the contents of the target variable.
+train_df = train_df[
+    ["Pclass", "Sex", "Age", "SibSp", "Parch", "Fare", "Cabin", "Embarked"]
+]
 ```
 
 In our dataset, we have both categorical as well as continuous variables. For encoding the categorical data and identifying the numerical columns, TensorFlow has a built-in method. To be able to use any kind of data with TensorFlow we will need to convert them into tensors.
@@ -186,15 +190,13 @@ In our dataset, we have both categorical as well as continuous variables. For en
 ```python
 # Creating a set of columns in their relevant form for TensorFlow:
 CATEGORICAL_COLUMNS = [
-    "sex",
-    "n_siblings_spouses",
-    "parch",
-    "class",
-    "deck",
-    "embark_town",
-    "alone",
+    "Sex",
+    "SibSp",
+    "Parch",
+    "Pclass",
+    "Embarked",
 ]  # Names of categorical columns
-NUMERIC_COLUMNS = ["age", "fare"]  # Names of continous columns
+NUMERIC_COLUMNS = ["Age", "Fare"]  # Names of continous columns
 feature_columns = []
 for feature_name in CATEGORICAL_COLUMNS:
     vocabulary = train_df[
@@ -220,25 +222,24 @@ At this point we need to perform one more step to get our data prepared for trai
 #### A User-defined function to convert the dataset into the required format for training the TensorFlow model:
 
 ````python
-def prepare_model_input(
-	dataset, # Input dataset as pandas.core.DataFrame object
-	target_column, # Tensor representing the target column
-	shuffle = True, # Shuffle the data.
-	no_epochs = 10, # Number of epochs for training the model
-	batch_size = 32 # Size of each batch while training the model
-):
-	def input_function(): # This function will be returned
-		ds = tf.data.Dataset.from_tensor_slices(
-			dict(dataset),
-			target_column
-		)
-		if shuffle == True:
-			ds = ds.shuffle(1000) # Randomize the order of the data
-		ds = ds.batch(batch_size).repeat(no_epochs) # Split the data into batches of 29 and repeat the process for each epoch
-		return ds
-	return input_function # Returning the function object for use.
+def prepare_model_input(data_df, target, num_epochs=10, shuffle=True, batch_size=32):
+    def input_function():  # inner function, this will be returned
+        ds = tf.data.Dataset.from_tensor_slices(
+            (dict(data_df), target)
+        )  # create tf.data.Dataset object with data and its label
+        if shuffle:
+            ds = ds.shuffle(1000)  # randomize order of data
+        ds = ds.batch(batch_size).repeat(
+            num_epochs
+        )  # split dataset into batches of 32 and repeat process for number of epochs
+        return ds  # return a batch of the dataset
 
-training_input = prepare_model_input(train, target)
+    return input_function  # return a function object for use
+
+
+training_input = prepare_model_input(
+    train_df, target
+)  # here we will call the input_function that was returned to us to get a dataset object we can feed to the model
 ````
 
 #### Creating and Training the model:
@@ -248,12 +249,32 @@ training_input = prepare_model_input(train, target)
 linear_model = tf.estimator.LinearClassifier(feature_columns=feature_columns)
 
 # Training the model:
-linear_model.train(train_df)
+linear_model.train(training_input)
 
 # Evaluating model metrics:
-model_metrics = linear_model.evaluate(train_df)
+model_metrics = linear_model.evaluate(training_input)
 print(model_metrics)
 
-# Making predictions:
-predictions = linear_model.predict(train_df)
+# Making Predictions:
+pred_dicts = list(linear_model.predict(training_input))
+probs = pd.Series([pred['probabilities'][1] for pred in pred_dicts])
+
+# Plotting the predicted probabilities:
+probs.plot(kind='hist', bins=20, title='predicted probabilities')
+````
+
+#### Implementing a Deep Neural Network for a binary classification problem:
+
+````python
+# Building the model object:
+deep_neural_network=tf.estimator.DNNClassifier(
+	feature_columns=feature_columns, # All the columns as a list of tensors
+	hidden_units=[30, 10] # Thne each element in the list corresponds to a hidden layer with the number of number representing the number of neurons
+	n_classes=2 # Number of classes in the target
+)
+
+# Training the Deep Neural Network Classifier:
+deep_neural_network.train(
+
+)
 ````
