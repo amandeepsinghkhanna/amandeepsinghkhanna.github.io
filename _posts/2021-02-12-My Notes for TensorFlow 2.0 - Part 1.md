@@ -47,9 +47,9 @@ Tensors are a multi-dimensional arrays with a uniform type (called a **dtype**).
 
 To create a tensor, you defined the value of the tensor and the data-type.
 ```python
-string = tf.Variable("this is a string", tf.string)
-number = tf.Variable(324, tf.int16)
-floating = tf.Variable(3.567, tf.float64)
+string=tf.Variable("this is a string",tf.string)
+number=tf.Variable(324,tf.int16)
+floating=tf.Variable(3.567,tf.float64)
 ```
 
 <br/>
@@ -87,8 +87,8 @@ floating = tf.Variable(3.567, tf.float64)
 Rank or the degree of tensors is the number of dimensions involved in the tensor. The above created tensor is of rank 0, which is also known as a scalar. Defining a tensor of higher dimensions.
 
 ```python
-rank1_tensor = tf.Variable(["Test"], tf.string)
-rank2_tensor = tf.Variable([["test", "ok"], ["test", "yes"]], tf.string)
+rank1_tensor=tf.Variable(["Test"],tf.string)
+rank2_tensor=tf.Variable([["test","ok"],["test","yes"]],tf.string)
 print(tf.rank(rank2_tensor)) # Checking the rank of a tensor.
 ```
 The rank of a tensor is directly related to the level of nested lists. The rank of the variable rank1_tensor is 1 as the deepest level of nesting is 1 and rank2_tensor is 2 as the deepest level of nesting 2.
@@ -111,8 +111,8 @@ The number of elements of a tensor is the product of the sizes of all its shapes
 
 ```python
 tensor1 = tf.ones([1,2,3]) # tf.ones() creates a shape [1,2,3] tensor full of ones
-tensor2 = tf.reshape(tensor1, [2,3,1]) # reshape existing data to shape [2,3,1]
-tensor3 = tf.reshape(tensor2, [3, -1]) # -1 tells the tensor to calculate the size of the dimension in that place
+tensor2 = tf.reshape(tensor1,[2,3,1]) # reshape existing data to shape [2,3,1]
+tensor3 = tf.reshape(tensor2,[3, -1]) # -1 tells the tensor to calculate the size of the dimension in that place
 # this will reshape the tensor to [3,3]
 # The numer of elements in the reshaped tensor MUST match the number in the original
 ```
