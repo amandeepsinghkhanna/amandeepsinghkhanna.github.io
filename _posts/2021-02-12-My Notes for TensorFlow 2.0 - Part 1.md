@@ -6,8 +6,7 @@ author: "Amandeep Singh Khanna"
 ---
 
 <div style="text-align: justify">
-If you're interested in Data Science, then the chances are that you've heard the name TensorFlow. Here are my notes from my journey to learn and master the latest update to the world's most famous Deep Learning and Machine Learning framework. I will keep updating this page on the website as I learn new things about TensorFlow 2.0.  So make sure that you bookmark this page!
-</div><br/>
+If you're interested in Data Science, then the chances are that you've heard the name TensorFlow. Here are my notes from my journey to learn and master the latest update to the world's most famous Deep Learning and Machine Learning framework. In this section, we will be learning basics of tensorflow and creating a linear TensorFlow model.</div><br/>
 
 If you want to use this resource for your use, then here are a few pre-requisites.
 1. Basic understanding of Machine Learning and Deep Learning algorithms.
