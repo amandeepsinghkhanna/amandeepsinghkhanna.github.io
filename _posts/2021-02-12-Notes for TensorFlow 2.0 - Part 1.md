@@ -265,4 +265,5 @@ probs = pd.Series([pred['probabilities'][1] for pred in pred_dicts])
 probs.plot(kind='hist', bins=20, title='predicted probabilities')
 ````
 
-If you've read till here, then you must be interested to know my source. My source for learning this content are the Tech with Tim Youtube channel and the TensorFlow Documentation.
+If you've read till here, then you must be interested to know my sources.
+My sources for learning this content are the Tech with Tim Youtube channel and the TensorFlow Documentation.
