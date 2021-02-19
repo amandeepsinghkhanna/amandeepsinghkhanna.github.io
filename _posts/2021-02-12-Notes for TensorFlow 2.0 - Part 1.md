@@ -3,10 +3,15 @@ layout: post
 html_page_title: "Notes for TensorFlow 2.0 - Part 1"
 title: "Notes for TensorFlow 2.0 - Part 1"
 author: "Amandeep Singh Khanna"
+description: "If you're interested in Data Science, then the chances are that you've heard the name TensorFlow. Here are my notes from my journey to learn and master the latest update to the world's most famous Deep Learning and Machine Learning framework. In this section, we will be learning basics of TensorFlow and creating a linear TensorFlow model.
+
+If you want to use this resource for your use, then here are a few pre-requisites.
+1. Basic understanding of Machine Learning and Deep Learning algorithms.
+2. Basic knowledge of Python Programming."
 ---
 
 <div style="text-align: justify">
-If you're interested in Data Science, then the chances are that you've heard the name TensorFlow. Here are my notes from my journey to learn and master the latest update to the world's most famous Deep Learning and Machine Learning framework. In this section, we will be learning basics of tensorflow and creating a linear TensorFlow model.</div><br/>
+If you're interested in Data Science, then the chances are that you've heard the name TensorFlow. Here are my notes from my journey to learn and master the latest update to the world's most famous Deep Learning and Machine Learning framework. In this section, we will be learning basics of TensorFlow and creating a linear TensorFlow model.</div><br/>
 
 If you want to use this resource for your use, then here are a few pre-requisites.
 1. Basic understanding of Machine Learning and Deep Learning algorithms.
