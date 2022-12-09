@@ -1,0 +1,49 @@
+<style>
+   .social-container{
+   margin: 10px auto;
+   max-width: 330px;
+   text-align: center;
+   }
+   .social-row{
+   margin: auto;
+   display:flex;
+   }
+   .social-icon{
+   width: 45px;
+   padding-left: 6.5%;
+   padding-right: 6.5%;
+   }
+   .social-icon:hover {
+   opacity: 0.5;
+   }
+</style>
+<footer>
+   <div class="social-container">
+      <div class="social-row">
+         <a href="mailto:amandeepsinghkhanna@gmail.com">
+         <img class="social-icon" src="{{ "/" | relative_url  }}assets/images/site/social_icons/email.png"/>
+         </a>
+         <a href="https://linkedin.com/in/amandeepsinghkhanna">
+         <img class="social-icon" src="{{ "/" | relative_url  }}assets/images/site/social_icons/linkedin.png"/>
+         </a>
+         <a href="https://github.com/amandeepsinghkhanna">
+         <img class="social-icon" src="{{ "/" | relative_url  }}assets/images/site/social_icons/github.png"/>
+         </a>
+         <a href="https://stackoverflow.com/users/8965571/amandeepsinghkhanna">
+         <img class="social-icon" src="{{ "/" | relative_url  }}assets/images/site/social_icons/stackoverflow.png"/>
+         </a>
+         <a href="https://twitter.com/aman_khanna_">
+         <img class="social-icon" src="{{ "/" | relative_url  }}assets/images/site/social_icons/twitter.png"/>
+         </a>
+         <a href="https://www.instagram.com/amankhanna/">
+         <img class="social-icon" src="{{ "/" | relative_url  }}assets/images/site/social_icons/instagram.png"/>
+         </a>
+         <a href="https://www.youtube.com/channel/UC3tySqEOsAHe1MIYHTQZQhQ">
+         <img class="social-icon" src="{{ "/" | relative_url  }}assets/images/site/social_icons/youtube.png"/>
+         </a>
+      </div>
+   </div>
+   <span>
+   &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> Amandeep Singh Khanna - All Rights Reserved.
+   </span>
+</footer>
