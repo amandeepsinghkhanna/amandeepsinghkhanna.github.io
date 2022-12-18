@@ -1,33 +1,49 @@
 ---
 layout: post
-title: "Feature Selection Techniques"
+title: "A Survey of Feature Selection Techniques in Machine Learning"
 author: "Amandeep Singh Khanna"
 tags: blog
-html_page_title: Feature Selection Techniques in Machine Learning
+html_page_title: A Survey of Feature Selection Techniques in Machine Learning
 ---
+<style>
+.references{
+    text-align:left;
+}
+</style>
 The process of feature selection (also known as variable selection, attribute selection or variable subset selection) is a core step in the machine leanring (ML)/ statistical modeling process. Feature selection assumes that there are a few features in the data that add little or no value to the performance of the ML/statistical model and can be removed without much deviation in the performance of the model. The main objective of feature selection is to reduce the number of features being used in the model in order to imporve its robustness/performance [1].
 By reducing the dimensions of the features being used, it also reduces the overall complexity of the model which aid in better generalized learning for the model (i.e., avoids over-fitting of the model) [2]. In many cases it may also aid in curbing the curse of dimensionality problem. Broadly, features can be classified into three main categories - *Relevant, Irrelevant & Redundant* [3].
+- **Relevant Features**: Features that have an influence on the feature to be predicted.
 
-- **Relevant Features**: Features that have an influence on the feature that is to be predicted.
-- **Irrelevant Features**: Features that do not have an influence on the feature that is to be predicted.
-- **Redundant Features**: Features that have a similar feature in the feature-set that can act a proxy for the other feature in the feature-set.
+- **Irrelevant Features**: Features that do no have an influence on the feature to be predicted.
 
-## References
-[1]Janez Brank, Dunja Mladenić, Marko Grobelnik, Hua Liu, Peter A.Flach, Gemma C.Garriga, Hannu Toivonen, "Encylopedia of Machine Learning", Page No. 402 - 406
+- **Redundant Features**: Features that have a similar feature in the feature-set that can act a proxy for the other feature in the feature-set. These features do not contribute to the enchancement of the performance of the model, but rather act as noise causing problems such as over-fitting etc.
 
-[2]Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, "An Introduction to Statistical Learning", Page No. 204
+<h1>Methods of Performing Feature Selection:</h1>
+Detailed below are a few popular feature selection methods.
+<h2>1. Filter Methods:</h2>
+Filter methods apply a ranking mechanism over the features. The ranking denotes how relevant/useful a given feature is for the prediction task [4]. Once the ranking is computed, N(Number of features) best features are selected as the candidate features to be used in the model.
+<h3>1.1 Pearson's Correlation Coefficient (PCC):</h3>
+The Pearson's Correlation Coefficient (also known as Pearson's r or Pearson's Product-Moment Correlation Coefficient (PPMC)) is an idea developed by Karl Pearson that provides a mechanism to measure the degree of linear relationship between any two sets of data. PCC is the covariance of the two features divided by the product of their respective standard deviations. When applied to a population, is commonly represented by the Greek letter ρ (rho). Given a pair of random variables (X,Y) the formula for ρ is:
+<img src="https://i.imgur.com/3MaJo75.png" title="Karl Pearson's Correlation Coefficient"/>
+The value of the PCC ranges between -1 and +1, where +1 and -1 indicate the strongest linear relationship between the two features and 0 indicates that that is no linear relationship between the two variables. The limitation of PCC are:
+- PCC can easily be distorted by outliers.
 
-[3]M.Karagiannopoulos, D.Anyfantis, S.B.Kotsiantis, P.E.Pintelas, "Feature Selection for Regression Problems"
+<div class='references'>
+<h1>References</h1>
+[1]&nbsp;Janez Brank, Dunja Mladenić, Marko Grobelnik, Hua Liu, Peter A.Flach, Gemma C.Garriga, Hannu Toivonen, "Encylopedia of Machine Learning", Page No. 402 - 406
+<br/><br/>
+[2]&nbsp;Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, "An Introduction to Statistical Learning", Page No. 204
+<br/><br/>
+[3]&nbsp;M.Karagiannopoulos, D.Anyfantis, S.B.Kotsiantis, P.E.Pintelas, "Feature Selection for Regression Problems"
+<br/><br/>
+[4]Matthew Shardlow, "An Analysis of Feature Selection Techniques"
+</div>
 
 <!-- Feature selection techniques can be broadly classified into wrappers, filters and embedded techniques.
 
 ## Wrappers -->
 
 <!-- ## References
-
-
-
-
 
 [3]Isabelle Guyon, André Elisseeff, "An Introduction to Variable and Feature Selection", Journal of Machine Learning Research Mar 2003
 
