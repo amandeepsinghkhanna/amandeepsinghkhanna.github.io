@@ -10,8 +10,8 @@ html_page_title: A Survey of Feature Selection Techniques in Machine Learning
     text-align:left;
 }
 </style>
-The process of feature selection (also known as variable selection, attribute selection or variable subset selection) is a core step in the machine leanring (ML)/ statistical modeling process. Feature selection assumes that there are a few features in the data that add little or no value to the performance of the ML/statistical model and can be removed without much deviation in the performance of the model. The main objective of feature selection is to reduce the number of features being used in the model in order to imporve its robustness/performance [1].
-By reducing the dimensions of the features being used, it also reduces the overall complexity of the model which aid in better generalized learning for the model (i.e., avoids over-fitting of the model) [2]. In many cases it may also aid in curbing the curse of dimensionality problem. Broadly, features can be classified into three main categories - *Relevant, Irrelevant & Redundant* [3].
+The process of feature selection (also known as variable selection, attribute selection or variable subset selection) is a core step in the machine learning (ML)/ statistical modeling process. Feature selection assumes that there are a few features in the data that add little or no value to the performance of the ML/statistical model and can be removed without much deviation in the performance of the model. The main objective of feature selection is to reduce the number of features being used in the model to improve its robustness/performance [1].
+Reducing the dimensions of the features being used also reduces the overall complexity of the model which aids in better-generalized learning for the model (i.e., avoids over-fitting of the model) [2]. In many cases, it may also aid     in curbing the curse of dimensionality problem. Broadly, features can be classified into three main categories - *Relevant, Irrelevant & Redundant* [3].
 - **Relevant Features**: Features that have an influence on the feature to be predicted.
 
 - **Irrelevant Features**: Features that do no have an influence on the feature to be predicted.
@@ -23,10 +23,16 @@ Detailed below are a few popular feature selection methods.
 <h2>1. Filter Methods:</h2>
 Filter methods apply a ranking mechanism over the features. The ranking denotes how relevant/useful a given feature is for the prediction task [4]. Once the ranking is computed, N(Number of features) best features are selected as the candidate features to be used in the model.
 <h3>1.1 Pearson's Correlation Coefficient (PCC):</h3>
-The Pearson's Correlation Coefficient (also known as Pearson's r or Pearson's Product-Moment Correlation Coefficient (PPMC)) is an idea developed by Karl Pearson that provides a mechanism to measure the degree of linear relationship between any two sets of data. PCC is the covariance of the two features divided by the product of their respective standard deviations. When applied to a population, is commonly represented by the Greek letter ρ (rho). Given a pair of random variables (X,Y) the formula for ρ is:
-<img src="https://i.imgur.com/3MaJo75.png" title="Karl Pearson's Correlation Coefficient"/>
-The value of the PCC ranges between -1 and +1, where +1 and -1 indicate the strongest linear relationship between the two features and 0 indicates that that is no linear relationship between the two variables. The limitation of PCC are:
+The Pearson's Correlation Coefficient (also known as Pearson's r or Pearson's Product-Moment Correlation Coefficient (PPMC)) is an idea developed by Karl Pearson that provides a mechanism to measure the degree of linear relationship between any two sets of continous data. PCC is the covariance of the two features divided by the product of their respective standard deviations. When applied to a population, is commonly represented by the Greek letter ρ (rho). Given a pair of random variables (X,Y) the formula for ρ is:
+<img src="https://i.imgur.com/3MaJo75.png" title="Karl Pearson's Correlation Coefficient Covariance Formula"/><br/>
+Also,
+<img src="https://i.imgur.com/NgUBEXL.png" title="Karl Pearson's Correlation Coefficient Computation Formula"><br/>
+The value of the PCC ranges between -1 and +1, where +1 and -1 indicate the strongest linear relationship between the two features and 0 indicates that there is no linear relationship between the two variables. The limitation of PCC are:
+
+- PCC can only be computed for two continous features.
+- PCC can only be used to compute the degree of linear relationship between the two variables and will fail in case of non-linear relationships.
 - PCC can easily be distorted by outliers.
+- PCC can be incorrectly used to infer a causal relationship between the features. (Correlation does not imply causation.)
 
 <div class='references'>
 <h1>References</h1>
