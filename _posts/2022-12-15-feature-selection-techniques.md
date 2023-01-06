@@ -30,7 +30,7 @@ The value of the PCC ranges between -1 and +1, where +1 and -1 indicate the stro
 
 Despite these limitations, the PCC is an effective feature selection tool for regression problems.
 
-### 1.2 Chi-squared (𝝌2) Test for Independence
+### 1.2 Chi-squared (𝝌2) test for Independence
 
 The chi-squared (𝝌2) test for the independence of variables is used to examine the interdependence of a pair of nominal features. Since the chi-squared test tells us if the change in one feature causes a change in the other, we can consider it to be a method of computing correlation between two nominal features [5].
 
