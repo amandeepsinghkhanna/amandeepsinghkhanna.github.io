@@ -28,7 +28,7 @@ The value of the PCC ranges between -1 and +1, where +1 and -1 indicate the stro
 
 - Can be incorrectly used to infer a causal relationship between the features (Correlation does not imply causation.)
 
-- Despite these limitations, the PCC is an effective feature selection tool for regression problems.
+Despite these limitations, the PCC is an effective feature selection tool for regression problems.
 
 ### 1.2 Chi-squared (𝝌2) Test for Independence
 
