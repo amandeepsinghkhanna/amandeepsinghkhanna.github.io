@@ -5,11 +5,21 @@ author: "Amandeep Singh Khanna"
 tags: blog
 html_page_title: A Survey of Feature Selection Techniques in Machine Learning
 ---
+
+# Abstract
+
+In the current age of data, many real-world domains provide us with a high volume of features in the data. Many of these additional features seem irrelevant, forcing the machine learning algorithms to generalise worse when compared to an optimal subset of these features. Feature selection is the process of identifying and removing irrelevant and redundant features. This reduction in  the dimensionality of data may enable machine learning algorithms to operate faster and more effectively. In this survey, I review the advances that have been made in feature selection techniques in both empirical and theoretical work in machine learning and present a general framework that I use to compare different techniques, closing with challenges and future work in the area. 
+
+*Keywords:* Feature Selection, Feature subset selection
+
+
 # Introduction
 
-The feature selection process (AKA. variable selection, attribute selection or variable subset selection) is a core step in the Machine Learning (ML)/Statistical Modeling process. The Feature selection process assumes the presence of features within the model that add little or no value to the model performance. A core objective of the feature selection process is identifying and eliminating these features from the model to improve the robustness/performance [1]. The reduction of dimensions from the model also reduces the overall complexity of the model. Hence aiding in better-generalized learning for the model (i.e., prevents over-fitting) [2]. Model features are termed - relevant (Influence the model output and cannot be replaced by any other feature in the model.), irrelevant (Do not influence the model output),  and redundant (Can be replaced by another feature in the model) [3].
+The feature selection process (AKA. variable selection, attribute selection or variable subset selection) is a core step in the Machine Learning (ML)/Statistical Modeling (SM) process. The Feature selection process assumes the presence of features within the model that add little or no value to the model performance. A core objective of the feature selection process is identifying and eliminating these features from the model to improve the robustness/performance [1]. The reduction of dimensions from the model also reduces the overall complexity of the model. Hence aiding in better-generalized learning for the model (i.e., prevents over-fitting) [2].  During the feature selection process, each of the model features is identified as Relevant (Influences the model output and cannot be replaced by any other feature in the model.), Irrelevant (Does not influence the model output),  or Redundant (Can be replaced by another feature in the model) [3].
 
 # Background Study
+
+The main categories of feature selection algorithms are - Filter, Wrappers, Embedded & Hybrid [4].
 
 ## 1. Filter Methods
 
@@ -32,7 +42,10 @@ Despite these limitations, the PCC is an effective feature selection tool for re
 
 ### 1.2 Chi-squared (𝝌2) test for Independence
 
-The chi-squared (𝝌2) test for the independence of variables is used to examine the interdependence of a pair of nominal features. Since the chi-squared test tells us if the change in one feature causes a change in the other, we can consider it to be a method of computing correlation between two nominal features [5].
+The chi-squared (𝝌) test for the independence of variables is used to examine the interdependence of a pair of categorical features. Since the chi-squared test tells us if the change in one feature causes a change in the other, we can consider it to be a method of computing correlation between two categorical features [6].  The hypothesis of the test is as follows:
+Null Hypothesis: The two features are independent.
+Alternate Hypothesis:  The two features are dependent on each other.
+The chi-squared statistic is computed as
 
 ## 2. Wrapper Methods
 
