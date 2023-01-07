@@ -10,7 +10,7 @@ html_page_title: A Survey of Feature Selection Techniques in Machine Learning
 
 In the current age of data, many real-world domains provide us with a high volume of features in the data. Many of these additional features seem irrelevant, forcing the machine learning algorithms to generalise worse when compared to an optimal subset of these features. Feature selection is the process of identifying and removing irrelevant and redundant features. This reduction in  the dimensionality of data may enable machine learning algorithms to operate faster and more effectively. In this survey, I review the advances that have been made in feature selection techniques in both empirical and theoretical work in machine learning and present a general framework that I use to compare different techniques, closing with challenges and future work in the area. 
 
-*Keywords:* Feature Selection, Feature subset selection
+**Keywords:** *Feature Selection, Feature subset selection*
 
 
 # Introduction
