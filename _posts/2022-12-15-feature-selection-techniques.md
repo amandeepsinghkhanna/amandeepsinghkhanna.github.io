@@ -37,7 +37,7 @@ A core objective of the feature selection process is to identify and eliminate r
 
 In terms of availability of labeled data, feature selection techniques can be grouped into three main groups – Supervised methods, Semi-Supervised methods, Unsupervised methods **[6]**. Based on the relevant feature search strategy, feature selection techniques can be grouped into three main groups – Wrapper, Filter, Embedded **[6]**.
 
-<img title="Feature Selection Techniques Flowchart Image" alt="Feature Selection Techniques Flowchart Image" src="https://i.imgur.com/3nMLL0A.png">
+<img title="Feature Selection Techniques Flowchart Image" alt="Feature Selection Techniques Flowchart Image" src="https://i.imgur.com/suhObey.png">
 <span class="image-annotation">Fig. 1 Feature selection techniques classified on the basis of availability of labeled data & the strategy for selection of relevant features in the feature space.</span>
 
 ## References:
