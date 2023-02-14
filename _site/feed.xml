@@ -1,64 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="amandeepsinghkhanna.com/feed.xml" rel="self" type="application/atom+xml" /><link href="amandeepsinghkhanna.com/" rel="alternate" type="text/html" /><updated>2023-01-06T19:21:36+05:30</updated><id>amandeepsinghkhanna.com/feed.xml</id><title type="html">Amandeep Singh Khanna</title><entry><title type="html">A Survey of Feature Selection Techniques in Machine Learning</title><link href="amandeepsinghkhanna.com/feature-selection-techniques/" rel="alternate" type="text/html" title="A Survey of Feature Selection Techniques in Machine Learning" /><published>2022-12-15T00:00:00+05:30</published><updated>2022-12-15T00:00:00+05:30</updated><id>amandeepsinghkhanna.com/feature-selection-techniques</id><content type="html" xml:base="amandeepsinghkhanna.com/feature-selection-techniques/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="amandeepsinghkhanna.com/feed.xml" rel="self" type="application/atom+xml" /><link href="amandeepsinghkhanna.com/" rel="alternate" type="text/html" /><updated>2023-02-14T09:20:58+05:30</updated><id>amandeepsinghkhanna.com/feed.xml</id><title type="html">Amandeep Singh Khanna</title><entry><title type="html">A Review of Feature Selection Techniques in Machine Learning</title><link href="amandeepsinghkhanna.com/feature-selection-techniques/" rel="alternate" type="text/html" title="A Review of Feature Selection Techniques in Machine Learning" /><published>2022-12-15T00:00:00+05:30</published><updated>2022-12-15T00:00:00+05:30</updated><id>amandeepsinghkhanna.com/feature-selection-techniques</id><content type="html" xml:base="amandeepsinghkhanna.com/feature-selection-techniques/">&lt;style&gt;
+    .image-annotation{
+        font-size: 0.6em;
+        text-align: center;
+    }
+&lt;/style&gt;
 
-&lt;p&gt;The feature selection process (AKA. variable selection, attribute selection or variable subset selection) is a core step in the Machine Learning (ML)/Statistical Modeling process. The Feature selection process assumes the presence of features within the model that add little or no value to the model performance. A core objective of the feature selection process is identifying and eliminating these features from the model to improve the robustness/performance [1]. The reduction of dimensions from the model also reduces the overall complexity of the model. Hence aiding in better-generalized learning for the model (i.e., prevents over-fitting) [2]. Model features are termed - relevant (Influence the model output and cannot be replaced by any other feature in the model.), irrelevant (Do not influence the model output),  and redundant (Can be replaced by another feature in the model) [3].&lt;/p&gt;
+&lt;h2 id=&quot;abstract&quot;&gt;Abstract:&lt;/h2&gt;
 
-&lt;h1 id=&quot;background-study&quot;&gt;Background Study&lt;/h1&gt;
+&lt;p&gt;In the current age of data, many real-world domains provide a high volume of features in data. Many of these additional features seem irrelevant, forcing the machine learning algorithms to generalize worse when compared to an optimal subset of these features. Feature selection techniques identify the optimal feature set that can enable machine learning algorithms to operate faster and more effectively. In this survey, I review advances in feature selection techniques in both empirical and theoretical work in machine learning and present a general framework used to compare different strategies, closing with challenges and further research prospects in the area.&lt;/p&gt;
 
-&lt;h2 id=&quot;1-filter-methods&quot;&gt;1. Filter Methods&lt;/h2&gt;
+&lt;h2 id=&quot;keywords&quot;&gt;Keywords:&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Feature Selection&lt;/em&gt;, &lt;em&gt;Feature Subset Selection&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;11-pearsons-correlation-coefficient-pcc&quot;&gt;1.1 Pearson’s Correlation Coefficient (PCC)&lt;/h3&gt;
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction:&lt;/h2&gt;
 
-&lt;p&gt;Developed by Karl Pearson, the Pearson’s Correlation Coefficient (AKA. Pearson’s r or Pearson’s Product Moment Correlation) provides a mechanism to measure the degree of the linear relationship between any two sets of continuous data [4]. Given a pair of continuous random variables X and Y, the PCC (⍴) is expressed as&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/3MaJo75.png&quot; title=&quot;Karl Pearson&apos;s Correlation Coefficient Covariance Formula&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;https://i.imgur.com/NgUBEXL.png&quot; title=&quot;Karl Pearson&apos;s Correlation Coefficient Computation Formula&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;The value of the PCC ranges between -1 and +1, where +1 and -1 indicate the strongest degrees of the linear relationship between the pair of continuous random variables and 0 indicates no linear relationship between the two random variables. The limitations of the PCC are&lt;/p&gt;
+&lt;p&gt;A feature is an individual measurable property of a process being observed &lt;strong&gt;[1]&lt;/strong&gt;. All the features in the data used to train and develop a machine learning/statistical model are collectively known as the feature space. It has been widely noted that the subset of features from the feature space drastically impact the performance/robustness of the model. Features used in the model can be broadly grouped into four main groups based on how they impact the performance/robustness of the model &lt;strong&gt;[2, 3]&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Can only be used to determine the strength of linear relationships&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Strongly relevant&lt;/strong&gt; – Significantly improves the performance and cannot be replaced by any other feature in the feature space.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Easily distorted by the presence of outliers&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Weakly relevant&lt;/strong&gt; – Improves the performance of the model, but with a much lesser magnitude in comparison to the strongly relevant features in the feature space.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Can be incorrectly used to infer a causal relationship between the features (Correlation does not imply causation.)&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Redundant&lt;/strong&gt; – Improves the performance of the model individually, but it has a similar effect as one on more features in the feature space. Redundant features can be replaced by the other features in the feature space.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Despite these limitations, the PCC is an effective feature selection tool for regression problems.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Irrelevant&lt;/strong&gt; – Decrease or no improvement in the performance of the model. Removal of these features improves the performance/robustness of the model.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;12-chi-squared-𝝌2-test-for-independence&quot;&gt;1.2 Chi-squared (𝝌2) Test for Independence&lt;/h3&gt;
+&lt;p&gt;A core objective of the feature selection process is to identify and eliminate redundant and irrelevant features from the model &lt;strong&gt;[4]&lt;/strong&gt;. The reduction in dimensions of the feature space reduces the overall complexity of the model, aiding in better generalized learning of the model (i.e., prevents the model from over-fitting) &lt;strong&gt;[5]&lt;/strong&gt;. A significant reduction in memory storage requirements and computational requirements for the analysis is also a by-product of the feature selection process &lt;strong&gt;[7]&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;The chi-squared (𝝌2) test for the independence of variables is used to examine the interdependence of a pair of nominal features. Since the chi-squared test tells us if the change in one feature causes a change in the other, we can consider it to be a method of computing correlation between two nominal features [5].&lt;/p&gt;
+&lt;p&gt;In terms of availability of labeled data, feature selection techniques can be grouped into three main groups – Supervised methods, Semi-Supervised methods, Unsupervised methods &lt;strong&gt;[6]&lt;/strong&gt;. Based on the relevant feature search strategy, feature selection techniques can be grouped into three main groups – Wrapper, Filter, Embedded &lt;strong&gt;[6]&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;2-wrapper-methods&quot;&gt;2. Wrapper Methods&lt;/h2&gt;
+&lt;p&gt;&lt;img title=&quot;Feature Selection Techniques Flowchart Image&quot; alt=&quot;Feature Selection Techniques Flowchart Image&quot; src=&quot;https://i.imgur.com/3nMLL0A.png&quot; /&gt;
+&lt;span class=&quot;image-annotation&quot;&gt;Fig. 1 Feature selection techniques classified on the basis of availability of labeled data &amp;amp; the strategy for selection of relevant features in the feature space.&lt;/span&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;3-embedded-methods&quot;&gt;3. Embedded Methods&lt;/h2&gt;
-
-&lt;h2 id=&quot;4-hybrid-methods&quot;&gt;4. Hybrid Methods&lt;/h2&gt;
-
-&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Liu, H. (2011). Feature Selection. In: Sammut, C., Webb, G.I. (eds) Encyclopedia of Machine Learning. Springer, Boston, MA. https://doi.org/10.1007/978-0-387-30164-8_306&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Gareth James; Daniela Witten; Trevor Hastie; Robert Tibshirani (2013). An Introduction to Statistical Learning. Springer. p. 204.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Karagiannopoulos, M., et al. “Feature selection for regression problems.” Educational Software Development Laboratory, Department of Mathematics, University of Patras, Greece (2004).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Pearson correlation coefficient. (2022, November 28). In Wikipedia. https://en.wikipedia.org/wiki/Pearson_correlation_coefficient&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;“Chi-Square - Sociology 3112 - Department of Sociology - The University of utah”. soc.utah.edu. Retrieved 2022-11-12.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Wah, Yap Bee, et al. “Feature Selection Methods: Case of Filter and Wrapper Approaches for Maximising Classification Accuracy.” Pertanika Journal of Science &amp;amp; Technology 26.1 (2018).&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Amandeep Singh Khanna</name></author><category term="blog" /><summary type="html">Introduction</summary></entry></feed>
+&lt;h2 id=&quot;references&quot;&gt;References:&lt;/h2&gt;</content><author><name>Amandeep Singh Khanna</name></author><category term="blog" /><summary type="html">Abstract: In the current age of data, many real-world domains provide a high volume of features in data. Many of these additional features seem irrelevant, forcing the machine learning algorithms to generalize worse when compared to an optimal subset of these features. Feature selection techniques identify the optimal feature set that can enable machine learning algorithms to operate faster and more effectively. In this survey, I review advances in feature selection techniques in both empirical and theoretical work in machine learning and present a general framework used to compare different strategies, closing with challenges and further research prospects in the area. Keywords: Feature Selection, Feature Subset Selection Introduction: A feature is an individual measurable property of a process being observed [1]. All the features in the data used to train and develop a machine learning/statistical model are collectively known as the feature space. It has been widely noted that the subset of features from the feature space drastically impact the performance/robustness of the model. Features used in the model can be broadly grouped into four main groups based on how they impact the performance/robustness of the model [2, 3]: Strongly relevant – Significantly improves the performance and cannot be replaced by any other feature in the feature space. Weakly relevant – Improves the performance of the model, but with a much lesser magnitude in comparison to the strongly relevant features in the feature space. Redundant – Improves the performance of the model individually, but it has a similar effect as one on more features in the feature space. Redundant features can be replaced by the other features in the feature space. Irrelevant – Decrease or no improvement in the performance of the model. Removal of these features improves the performance/robustness of the model. A core objective of the feature selection process is to identify and eliminate redundant and irrelevant features from the model [4]. The reduction in dimensions of the feature space reduces the overall complexity of the model, aiding in better generalized learning of the model (i.e., prevents the model from over-fitting) [5]. A significant reduction in memory storage requirements and computational requirements for the analysis is also a by-product of the feature selection process [7]. In terms of availability of labeled data, feature selection techniques can be grouped into three main groups – Supervised methods, Semi-Supervised methods, Unsupervised methods [6]. Based on the relevant feature search strategy, feature selection techniques can be grouped into three main groups – Wrapper, Filter, Embedded [6]. Fig. 1 Feature selection techniques classified on the basis of availability of labeled data &amp;amp; the strategy for selection of relevant features in the feature space. References:</summary></entry></feed>
