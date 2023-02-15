@@ -13,14 +13,14 @@ html_page_title: A Review of Feature Selection Techniques in Machine Learning
     }
 </style>
 
-## Abstract:
+# Abstract:
 
 In the current age of data, many real-world domains provide a high volume of features in data. Many of these additional features seem irrelevant, forcing the machine learning algorithms to generalize worse when compared to an optimal subset of these features. Feature selection techniques identify the optimal feature set that can enable machine learning algorithms to operate faster and more effectively. In this survey, I review advances in feature selection techniques in both empirical and theoretical work in machine learning and present a general framework used to compare different strategies, closing with challenges and further research prospects in the area.
 
-## Keywords: 
+# Keywords: 
 *Feature Selection*, *Feature Subset Selection*
 
-## Introduction:
+# Introduction:
 
 A feature is an individual measurable property of a process being observed **[1]**. All the features in the data used to train and develop a machine learning/statistical model are collectively known as the feature space. It has been widely noted that the subset of features from the feature space drastically impact the performance/robustness of the model. Features used in the model can be broadly grouped into four main groups based on how they impact the performance/robustness of the model **[2, 3]**:
 
@@ -39,8 +39,18 @@ In terms of availability of labeled data, feature selection techniques can be gr
 <img title="Feature Selection Techniques Flowchart Image" alt="Feature Selection Techniques Flowchart Image" src="https://i.imgur.com/suhObey.png">
 <span class="image-annotation">Fig. 1 Feature selection techniques classified on the basis of availability of labeled data & the strategy for selection of relevant features in the feature space.</span>
 
+# Background Study:
+
+## 1. Filter Methods:
+
+### 1.1. Pearson's Correlation Coefficient (PCC):
+Developed by Karl Pearson, the Pearson’s Correlation Coefficient (AKA. Pearson’s r or Pearson’s Product Moment Correlation) provides a mechanism to measure the degree of the linear relationship between any two sets of continuous data [4]. Given a pair of continuous random variables X and Y, the PCC (⍴) is expressed as
+
+$$\rho(X, Y) = \frac{Cov(X, Y)}{\sigma X \sigma Y}$$
+
+
 The python implementation for all the feature selection techniques mentioned above can be found [here](https://github.com/amandeepsinghkhanna/feature-selection-techniques)
 
 ## References:
 
-$$mean = \frac{\displaystyle\sum_{i=1}^{n} x_{i}}{n}$$
+<!-- $$mean = \frac{\displaystyle\sum_{i=1}^{n} x_{i}}{n}$$ -->
