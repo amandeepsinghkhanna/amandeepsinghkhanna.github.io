@@ -42,3 +42,5 @@ In terms of availability of labeled data, feature selection techniques can be gr
 The python implementation for all the feature selection techniques mentioned above can be found [here](https://github.com/amandeepsinghkhanna/feature-selection-techniques)
 
 ## References:
+
+$$mean = \frac{\displaystyle\sum_{i=1}^{n} x_{i}}{n}$$
