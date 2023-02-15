@@ -48,6 +48,7 @@ Developed by Karl Pearson, the Pearson’s Correlation Coefficient (AKA. Pearson
 
 $$\rho(X, Y) = \frac{Cov(X, Y)}{\sigma X \sigma Y}$$
 
+$$\rho(X, Y) = \frac{\Sigma (X - \bar{X})(Y - \bar{Y})}{\sqrt{\Sigma (X - \bar{x})^2}\sqrt{\Sigma (Y - \bar{Y})^2}}$$
 
 The python implementation for all the feature selection techniques mentioned above can be found [here](https://github.com/amandeepsinghkhanna/feature-selection-techniques)
 
