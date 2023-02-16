@@ -49,7 +49,7 @@ Developed by Karl Pearson, the Pearson’s Correlation Coefficient (AKA. Pearson
 
 $$\rho(X, Y) = \frac{Cov(X, Y)}{\sigma X \sigma Y}$$
 
-$$\rho(X, Y) = \frac{\Sigma (X - \bar{X})(Y - \bar{Y})}{\sqrt{\Sigma (X - \bar{x})^2}\sqrt{\Sigma (Y - \bar{Y})^2}}$$
+$$\rho(X, Y) = \frac{\Sigma (X - \bar{X})(Y - \bar{Y})}{\sqrt{\Sigma (X - \bar{X})^2}\sqrt{\Sigma (Y - \bar{Y})^2}}$$
 
 The value of the PCC ranges between -1 and +1, where +1 and -1 indicate the strongest degrees of the linear relationship between the pair of continuous random variables and 0 indicates no linear relationship between the two random variables. The limitations of the PCC are:
 
