@@ -60,6 +60,13 @@ The value of the PCC ranges between -1 and +1, where +1 and -1 indicate the stro
 
 Despite these limitations, the PCC is an effective feature selection tool for regression problems.
 
+### 1.2 Chi-squared (𝝌2) test for Independence:
+
+The chi-squared (𝝌) test for the independence of variables is used to examine the interdependence of a pair of categorical features. Since the chi-squared test tells us if the change in one feature causes a change in the other, we can consider it to be a method of computing correlation between two categorical features [6]. The hypothesis of the test is as follows:
+
+- Null Hypothesis: The two features are independent.
+- Alternate Hypothesis:  The two features are dependent on each other.
+
 The python implementation for all the feature selection techniques mentioned above can be found [here](https://github.com/amandeepsinghkhanna/feature-selection-techniques)
 
 ## References:
