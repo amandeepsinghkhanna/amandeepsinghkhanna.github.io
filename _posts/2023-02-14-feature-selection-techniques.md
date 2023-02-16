@@ -17,8 +17,7 @@ html_page_title: A Review of Feature Selection Techniques in Machine Learning
 
 In the current age of data, many real-world domains provide a high volume of features in data. Many of these additional features seem irrelevant, forcing the machine learning algorithms to generalize worse when compared to an optimal subset of these features. Feature selection techniques identify the optimal feature set that can enable machine learning algorithms to operate faster and more effectively. In this survey, I review advances in feature selection techniques in both empirical and theoretical work in machine learning and present a general framework used to compare different strategies, closing with challenges and further research prospects in the area.
 
-# Keywords: 
-*Feature Selection*, *Feature Subset Selection*
+**Keywords:** *Feature Selection*, *Feature Subset Selection*
 
 # Introduction:
 
@@ -64,5 +63,3 @@ Despite these limitations, the PCC is an effective feature selection tool for re
 The python implementation for all the feature selection techniques mentioned above can be found [here](https://github.com/amandeepsinghkhanna/feature-selection-techniques)
 
 ## References:
-
-<!-- $$mean = \frac{\displaystyle\sum_{i=1}^{n} x_{i}}{n}$$ -->
