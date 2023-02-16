@@ -44,11 +44,22 @@ In terms of availability of labeled data, feature selection techniques can be gr
 ## 1. Filter Methods:
 
 ### 1.1. Pearson's Correlation Coefficient (PCC):
+
 Developed by Karl Pearson, the Pearson’s Correlation Coefficient (AKA. Pearson’s r or Pearson’s Product Moment Correlation) provides a mechanism to measure the degree of the linear relationship between any two sets of continuous data [4]. Given a pair of continuous random variables X and Y, the PCC (⍴) is expressed as
 
 $$\rho(X, Y) = \frac{Cov(X, Y)}{\sigma X \sigma Y}$$
 
 $$\rho(X, Y) = \frac{\Sigma (X - \bar{X})(Y - \bar{Y})}{\sqrt{\Sigma (X - \bar{x})^2}\sqrt{\Sigma (Y - \bar{Y})^2}}$$
+
+The value of the PCC ranges between -1 and +1, where +1 and -1 indicate the strongest degrees of the linear relationship between the pair of continuous random variables and 0 indicates no linear relationship between the two random variables. The limitations of the PCC are:
+
+- Can only be used to determine the strength of linear relationships
+
+- Easily distorted by the presence of outliers
+
+- Can be incorrectly used to infer a causal relationship between the features (Correlation does not imply causation.)
+
+Despite these limitations, the PCC is an effective feature selection tool for regression problems.
 
 The python implementation for all the feature selection techniques mentioned above can be found [here](https://github.com/amandeepsinghkhanna/feature-selection-techniques)
 
