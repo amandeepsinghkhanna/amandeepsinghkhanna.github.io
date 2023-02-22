@@ -70,3 +70,7 @@ The chi-squared (𝝌) test for the independence of variables is used to examine
 The python implementation for all the feature selection techniques mentioned above can be found [here](https://github.com/amandeepsinghkhanna/feature-selection-techniques)
 
 ## References:
+
+1. A Survey on Feature Selection Methods - Girish Chandrashekar, 2014
+2. Fundamentals of Feature Selection: An Overview and Comparison – Amina Benkessirat – 2019
+3. Feature Selection for Regression Problems – M. Karagiannopoulos – 2004
