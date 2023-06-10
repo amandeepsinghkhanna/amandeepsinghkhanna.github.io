@@ -1,0 +1,49 @@
+---
+title: "Artwork"
+layout: about_template
+permalink: /artwork/
+html_page_title: "Artwork - Amandeep Singh Khanna"
+---
+<style>
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .gallery-item{
+    flex: 0 0 30%;
+    padding: 1%;
+    position: relative;
+  }
+  .gallery-item img:hover {
+      transform: scale(1.1); /* Adjust the scaling factor to control the hover effect */
+    }
+  .gallery-item:hover .caption {
+      opacity: 1;
+    }
+    .gallery-item .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7); /* Adjust the background color and opacity */
+      color: #fff; /* Adjust the caption text color */
+      padding: 5px;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+</style>
+<div class="gallery">
+  <div class="gallery-item">
+    <a href="{{ '/' | relative_url  }}assets/images/site/digital_art/Family of Flamingos.jpg">
+      <img src="{{ '/' | relative_url  }}assets/images/site/digital_art/Family of Flamingos.jpg" alt="Image 1">
+      <div class="caption">A Family of Flamingos</div>
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="{{ '/' | relative_url  }}assets/images/site/digital_art/Kawai Teaddy Bear Christmas Card.jpg">
+      <img src="{{ '/' | relative_url  }}assets/images/site/digital_art/Kawai Teaddy Bear Christmas Card.jpg" alt="Image 2">
+      <div class="caption">Kawai Christmas Card</div>
+    </a>
+  </div>
+</div>

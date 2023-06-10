@@ -92,35 +92,49 @@
       </div> -->
    <h1 class="post-title">Artwork</h1>
    <div class="post-line"></div>
-    <style>
-  .artwork-gallery-container{
-    display: inline;
+   <style>
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
   }
-  .artwork-img{
-    vertical-align: middle;
+  .gallery-item{
+    flex: 0 0 30%;
+    padding: 1%;
+    position: relative;
   }
-  .artwork-gallery h2{
-    text-align: center;
-  }
+  .gallery-item img:hover {
+      transform: scale(1.1); /* Adjust the scaling factor to control the hover effect */
+    }
+  .gallery-item:hover .caption {
+      opacity: 1;
+    }
+    .gallery-item .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7); /* Adjust the background color and opacity */
+      color: #fff; /* Adjust the caption text color */
+      padding: 5px;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
 </style>
-
-
-<div class="artwork-gallery-container">
-  <div class="artwork-gallery" id="lightgallery">
-    <h2>The Family of Flamingos</h2>
-    <a href="https://i.imgur.com/f3XmXMc.jpeg">
-      <img class="img-responsive" src="https://i.imgur.com/f3XmXMc.jpeg">
+<div class="gallery">
+  <div class="gallery-item">
+    <a href="/assets/images/site/digital_art/Family of Flamingos.jpg">
+      <img src="/assets/images/site/digital_art/Family of Flamingos.jpg" alt="Image 1">
+      <div class="caption">A Family of Flamingos</div>
     </a>
-    <h2>Kawai Christmas Card</h2>
-    <a href="https://i.imgur.com/i0C7K3X.jpeg">
-    <img class="img-responsive" src="https://i.imgur.com/i0C7K3X.jpeg">
+  </div>
+  <div class="gallery-item">
+    <a href="/assets/images/site/digital_art/Kawai Teaddy Bear Christmas Card.jpg">
+      <img src="/assets/images/site/digital_art/Kawai Teaddy Bear Christmas Card.jpg" alt="Image 2">
+      <div class="caption">Kawai Christmas Card</div>
     </a>
   </div>
 </div>
-
-<script type="text/javascript">
-      lightGallery(document.getElementById('lightgallery'));
-</script>
 
 </div>
 <div class="pagination">
@@ -176,7 +190,7 @@
       </div>
    </div>
    <span>
-   &copy; <time datetime="2023-06-09 15:50:01 +0530">2023</time> Amandeep Singh Khanna - All Rights Reserved.
+   &copy; <time datetime="2023-06-10 07:00:54 +0530">2023</time> Amandeep Singh Khanna - All Rights Reserved.
    </span>
 </footer>
 
