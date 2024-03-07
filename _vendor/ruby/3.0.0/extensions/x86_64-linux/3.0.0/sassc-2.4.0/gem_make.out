@@ -1,11 +1,11 @@
-current directory: /home/amankhanna/Projects/PersonalWebsite/amandeepsinghkhanna.github.io/_vendor/ruby/3.0.0/gems/sassc-2.4.0/ext
-/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20230609-8303-1lcrat.rb extconf.rb
+current directory: /mnt/c/Users/amandeepsinghkhanna/Documents/Coding Projects/amandeepsinghkhanna.github.io/_vendor/ruby/3.0.0/gems/sassc-2.4.0/ext
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240307-13031-3lsfd7.rb extconf.rb
 creating Makefile
 
-current directory: /home/amankhanna/Projects/PersonalWebsite/amandeepsinghkhanna.github.io/_vendor/ruby/3.0.0/gems/sassc-2.4.0/ext
+current directory: /mnt/c/Users/amandeepsinghkhanna/Documents/Coding Projects/amandeepsinghkhanna.github.io/_vendor/ruby/3.0.0/gems/sassc-2.4.0/ext
 make DESTDIR\= clean
 
-current directory: /home/amankhanna/Projects/PersonalWebsite/amandeepsinghkhanna.github.io/_vendor/ruby/3.0.0/gems/sassc-2.4.0/ext
+current directory: /mnt/c/Users/amandeepsinghkhanna/Documents/Coding Projects/amandeepsinghkhanna.github.io/_vendor/ruby/3.0.0/gems/sassc-2.4.0/ext
 make DESTDIR\=
 compiling ./libsass/src/memory/allocator.cpp
 compiling ./libsass/src/ast.cpp
@@ -75,6 +75,6 @@ compiling ./libsass/src/util_string.cpp
 compiling ./libsass/src/values.cpp
 linking shared-object sassc/libsass.so
 
-current directory: /home/amankhanna/Projects/PersonalWebsite/amandeepsinghkhanna.github.io/_vendor/ruby/3.0.0/gems/sassc-2.4.0/ext
+current directory: /mnt/c/Users/amandeepsinghkhanna/Documents/Coding Projects/amandeepsinghkhanna.github.io/_vendor/ruby/3.0.0/gems/sassc-2.4.0/ext
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 libsass.so ./.gem.20230609-8303-a9lk3o/sassc
+/usr/bin/install -c -m 0755 libsass.so ./.gem.20240307-13031-nz4lrm/sassc
