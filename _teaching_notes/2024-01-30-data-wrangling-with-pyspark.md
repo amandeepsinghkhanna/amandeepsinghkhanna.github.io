@@ -10,11 +10,29 @@ html_page_title: Data Wrangling with Python Cheatsheet - Amandeep Singh Khanna
 
 PySpark API provides a python wrapper around the spark framework. All elements of the spark framework can be accessed using the spark session object.
 
-# Table of Contents:
+## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Creating a Spark Session Object](#1-creating-a-spark-session-object)
-3. [Reading data from files](#2-reading-data-from-files)
+- [Introduction](#introduction)
+	- [Table of Contents](#table-of-contents)
+- [1. Creating a Spark Session Object:](#1-creating-a-spark-session-object)
+- [2. Reading data from files:](#2-reading-data-from-files)
+- [3. Converting a pandas DataFrame to a PySpark DataFrame:](#3-converting-a-pandas-dataframe-to-a-pyspark-dataframe)
+- [4. Exploring data stored in PySpark DataFrames:](#4-exploring-data-stored-in-pyspark-dataframes)
+	- [4.1. Displaying the DataFrame:](#41-displaying-the-dataframe)
+	- [4.2. Showing the schema of a DataFrame:](#42-showing-the-schema-of-a-dataframe)
+	- [4.3. Displaying the shape of a DataFrame:](#43-displaying-the-shape-of-a-dataframe)
+	- [4.4. Listing columns of a DataFrame:](#44-listing-columns-of-a-dataframe)
+- [5. Filtering rows and columns from a DataFrame:](#5-filtering-rows-and-columns-from-a-dataframe)
+- [6. Renaming Columns:](#6-renaming-columns)
+- [7. Imputing missing values in a DataFrames:](#7-imputing-missing-values-in-a-dataframes)
+- [8. Removing duplicate rows from a DataFrame:](#8-removing-duplicate-rows-from-a-dataframe)
+- [9. Displaying distinct values from a column:](#9-displaying-distinct-values-from-a-column)
+- [10. Creating a column with a constant value in a DataFrame:](#10-creating-a-column-with-a-constant-value-in-a-dataframe)
+- [11. Rounding values in a column of a DataFrame:](#11-rounding-values-in-a-column-of-a-dataframe)
+- [12. Typecasting columns in a DataFrame:](#12-typecasting-columns-in-a-dataframe)
+- [13. Creating a Temporary view from a DataFrame:](#13-creating-a-temporary-view-from-a-dataframe)
+- [14. Stopping/Ending a Spark Session:](#14-stoppingending-a-spark-session)
+
 
 # 1. Creating a Spark Session Object:
 
