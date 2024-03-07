@@ -4,6 +4,7 @@ title: "Data Wrangling with PySpark Cheatsheet"
 author: "Amandeep Singh Khanna"
 tags: teaching_notes
 html_page_title: Data Wrangling with Python Cheatsheet - Amandeep Singh Khanna
+description: "Struggling to wrangle data with PySpark? This cheatsheet offers a condensed guide to cleaning, manipulating, and transforming your data for analysis.  Learn to filter, impute missing values, and explore your data effectively - all within the PySpark framework. Boost your data wrangling skills and unlock valuable insights from your data with Amandeep Singh Khanna!"
 ---
 
 #  Introduction

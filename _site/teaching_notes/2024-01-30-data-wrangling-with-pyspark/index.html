@@ -12,9 +12,9 @@
    <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title></title>
+   <title>Data Wrangling with Python Cheatsheet - Amandeep Singh Khanna</title>
    <!-- META TAGS -->
-   <meta name="description" content="">
+   <meta name="description" content="Struggling to wrangle data with PySpark? This cheatsheet offers a condensed guide to cleaning, manipulating, and transforming your data for analysis.  Learn to filter, impute missing values, and explore your data effectively - all within the PySpark framework. Boost your data wrangling skills and unlock valuable insights from your data with Amandeep Singh Khanna!">
    <!-- CSS -->
    <link rel="stylesheet" href="/assets/main.css">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
@@ -85,7 +85,7 @@
    <div class="post-info">
       <span>Written by</span>
       
-      
+      Amandeep Singh Khanna
       
       
       <br>
@@ -94,17 +94,40 @@
    </div>
    <h1 class="post-title">Data Wrangling with PySpark Cheatsheet</h1>
    <div class="post-line"></div>
-   <h1 id="table-of-contents">Table of Contents:</h1>
-
-<ol>
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#1-creating-a-spark-session-object">Creating a Spark Session Object</a></li>
-  <li><a href="#2-reading-data-from-files">Reading data from files</a></li>
-</ol>
-
-<h1 id="introduction">Introduction</h1>
+   <h1 id="introduction">Introduction</h1>
 
 <p>PySpark API provides a python wrapper around the spark framework. All elements of the spark framework can be accessed using the spark session object.</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul>
+  <li><a href="#introduction">Introduction</a>
+    <ul>
+      <li><a href="#table-of-contents">Table of Contents</a></li>
+    </ul>
+  </li>
+  <li><a href="#1-creating-a-spark-session-object">1. Creating a Spark Session Object:</a></li>
+  <li><a href="#2-reading-data-from-files">2. Reading data from files:</a></li>
+  <li><a href="#3-converting-a-pandas-dataframe-to-a-pyspark-dataframe">3. Converting a pandas DataFrame to a PySpark DataFrame:</a></li>
+  <li><a href="#4-exploring-data-stored-in-pyspark-dataframes">4. Exploring data stored in PySpark DataFrames:</a>
+    <ul>
+      <li><a href="#41-displaying-the-dataframe">4.1. Displaying the DataFrame:</a></li>
+      <li><a href="#42-showing-the-schema-of-a-dataframe">4.2. Showing the schema of a DataFrame:</a></li>
+      <li><a href="#43-displaying-the-shape-of-a-dataframe">4.3. Displaying the shape of a DataFrame:</a></li>
+      <li><a href="#44-listing-columns-of-a-dataframe">4.4. Listing columns of a DataFrame:</a></li>
+    </ul>
+  </li>
+  <li><a href="#5-filtering-rows-and-columns-from-a-dataframe">5. Filtering rows and columns from a DataFrame:</a></li>
+  <li><a href="#6-renaming-columns">6. Renaming Columns:</a></li>
+  <li><a href="#7-imputing-missing-values-in-a-dataframes">7. Imputing missing values in a DataFrames:</a></li>
+  <li><a href="#8-removing-duplicate-rows-from-a-dataframe">8. Removing duplicate rows from a DataFrame:</a></li>
+  <li><a href="#9-displaying-distinct-values-from-a-column">9. Displaying distinct values from a column:</a></li>
+  <li><a href="#10-creating-a-column-with-a-constant-value-in-a-dataframe">10. Creating a column with a constant value in a DataFrame:</a></li>
+  <li><a href="#11-rounding-values-in-a-column-of-a-dataframe">11. Rounding values in a column of a DataFrame:</a></li>
+  <li><a href="#12-typecasting-columns-in-a-dataframe">12. Typecasting columns in a DataFrame:</a></li>
+  <li><a href="#13-creating-a-temporary-view-from-a-dataframe">13. Creating a Temporary view from a DataFrame:</a></li>
+  <li><a href="#14-stoppingending-a-spark-session">14. Stopping/Ending a Spark Session:</a></li>
+</ul>
 
 <h1 id="1-creating-a-spark-session-object">1. Creating a Spark Session Object:</h1>
 
@@ -335,7 +358,7 @@ If you have any feedback, you can email me at <a href="mailto:amandeepsinghkhann
       </div>
    </div>
    <span>
-   &copy; <time datetime="2024-03-07 14:16:58 +0530">2024</time> Amandeep Singh Khanna - All Rights Reserved.
+   &copy; <time datetime="2024-03-07 14:33:09 +0530">2024</time> Amandeep Singh Khanna - All Rights Reserved.
    </span>
 </footer>
 
