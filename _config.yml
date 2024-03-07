@@ -12,16 +12,8 @@ plugins:
   - jekyll-paginate
 permalink: '/:categories/:title/'
 paginate: 10
+
 collections:
-  recipes:
+  teaching_notes:
     output: true
-    sort_by: recipe_count
-    permalink: '/:collection/:name/'
-  projects:
-    output: true
-    sort_by: project_count
-    permalink: '/:collection/:name/'
-  songbook:
-    output: true
-    sort_by: song_count
     permalink: '/:collection/:name/'

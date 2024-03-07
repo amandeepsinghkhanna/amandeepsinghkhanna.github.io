@@ -1,0 +1,27 @@
+---
+title: "Class Notes"
+layout: home
+permalink: /teaching_notes/
+html_page_title: "Teaching Notes - Amandeep Singh Khanna"
+description: "Amandeep Singh Khanna - Teaching notes from classes at St. Joseph's University Bangalore."
+author: "Amandeep Singh Khanna"
+---
+
+
+
+<div class="catalogue">
+  {% for post in site.teaching_notes %}
+    <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+      <div>
+        <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
+        <h1 class="catalogue-title">{{ post.title }}</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+          {{ post.content | strip_html | truncatewords: 30 }}
+        </p>
+
+      </div>
+    </a>
+  {% endfor %}
+</div>
