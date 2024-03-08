@@ -1,15 +1,22 @@
 ---
 layout: post
-title: "Data Wrangling with PySpark Cheatsheet"
+title: "Master Data Wrangling with PySpark: A Comprehensive Cheat Sheet"
 author: "Amandeep Singh Khanna"
 tags: teaching_notes
-html_page_title: Data Wrangling with Python Cheatsheet - Amandeep Singh Khanna
+html_page_title: "Master Data Wrangling with PySpark: A Comprehensive Cheat Sheet - Amandeep Singh Khanna"
 description: "Struggling to wrangle data with PySpark? This cheatsheet offers a condensed guide to cleaning, manipulating, and transforming your data for analysis.  Learn to filter, impute missing values, and explore your data effectively - all within the PySpark framework. Boost your data wrangling skills and unlock valuable insights from your data with Amandeep Singh Khanna!"
 ---
 
 #  Introduction
 
-PySpark API provides a python wrapper around the spark framework. All elements of the spark framework can be accessed using the spark session object.
+PySpark offers a powerful and scalable solution for data wrangling tasks, especially when dealing with large datasets. Compared to traditional Python libraries like pandas, PySpark excels in:
+
+- **Distributed Processing:** PySpark leverages the power of clusters to process data in parallel, significantly improving performance for big data workloads.
+Fault Tolerance: PySpark can automatically handle machine failures and recompute lost tasks, ensuring data processing reliability.
+
+- **Scalability:** PySpark seamlessly scales up or down based on your data volume and computational needs.
+
+Unleash the power of Apache Spark for efficient data manipulation! This PySpark cheatsheet equips you with the essential techniques to conquer data wrangling challenges. From filtering and imputing missing values to exploring and transforming your data, this guide provides a concise roadmap to being your pyspark journey.
 
 ## Table of Contents
 
@@ -36,6 +43,9 @@ PySpark API provides a python wrapper around the spark framework. All elements o
 
 
 # 1. Creating a Spark Session Object:
+
+
+PySpark API provides a python wrapper around the spark framework. All elements of the spark framework can be accessed using the spark session object.
 
 ```python
 # import statements:
