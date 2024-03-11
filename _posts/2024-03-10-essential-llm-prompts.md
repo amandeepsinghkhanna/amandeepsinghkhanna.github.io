@@ -42,6 +42,7 @@ All the prompts need to have the following elements:
 
 This curated list dives deep into domain-specific prompts, empowering readers to leverage LLMs for a wide range of tasks across various industries. With this diverse set of prompts, anyone can tackle complex problems, generate innovative ideas, and unlock the hidden potential within these powerful language models.
 
-1. [Job Search/Interview Preparation]("./essntial_llm_prompts/jobsearch_prompts.md")
+1. [Job Search/Interview Preparation]("./jobsearch_prompts.md")
+2. []()
 
 🧑🏽‍💻 Thank you for reading this document. If you have any feedback or want to make an addition to the list of LLM prompts, you can email me at [amandeepsinghkhanna@gmail.com](mailto:amandeepsinghkhanna@gmail.com).
