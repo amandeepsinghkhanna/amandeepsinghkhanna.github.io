@@ -7,8 +7,6 @@ html_page_title: "Master Data Wrangling with PySpark: A Comprehensive Cheat Shee
 description: "Struggling to wrangle data with PySpark? This cheatsheet offers a condensed guide to cleaning, manipulating, and transforming your data for analysis.  Learn to filter, impute missing values, and explore your data effectively - all within the PySpark framework. Boost your data wrangling skills and unlock valuable insights from your data with Amandeep Singh Khanna!"
 ---
 
-#  Introduction
-
 PySpark offers a powerful and scalable solution for data wrangling tasks, especially when dealing with large datasets. Compared to traditional Python libraries like pandas, PySpark excels in:
 
 - **Distributed Processing:** PySpark leverages the power of clusters to process data in parallel, significantly improving performance for big data workloads.
@@ -20,8 +18,6 @@ Unleash the power of Apache Spark for efficient data manipulation! This PySpark 
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-	- [Table of Contents](#table-of-contents)
 - [1. Creating a Spark Session Object:](#1-creating-a-spark-session-object)
 - [2. Reading data from files:](#2-reading-data-from-files)
 - [3. Converting a pandas DataFrame to a PySpark DataFrame:](#3-converting-a-pandas-dataframe-to-a-pyspark-dataframe)
