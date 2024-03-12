@@ -17,9 +17,6 @@ jekyll-relative-links:
   enabled: true
   collections: true
 collections:
-  posts:
-    output: true
-    permalink: '/:collection/:name/'
   llm_prompt_categories:
     output: true
     permalink: '/:collection/:name/'
