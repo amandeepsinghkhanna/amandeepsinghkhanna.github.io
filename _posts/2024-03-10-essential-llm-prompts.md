@@ -14,7 +14,7 @@ Recent advances in generative AI are driving the revolution in artificial intell
 
 - [1. Introduction to LLMs](#1-introduction-to-llms)
   - [1.1. Introduction to prompt engineering](#11-introduction-to-prompt-engineering)
-    - [1.1.1 Elements of a good prompt](#111-elements-of-a-good-prompt)
+    - [1.1.1. Elements of a good prompt](#111-elements-of-a-good-prompt)
 - [2. List of LLM prompts by domain](#2-list-of-llm-prompts-by-domain)
 
 
@@ -29,7 +29,7 @@ Prompt engineering is a field that focuses on developing, designing and optimisi
 - Achieve better quality outputs through better quality inputs.
 - Interact with language models to grasp their full capabilities.
 
-### 1.1.1 Elements of a good prompt
+### 1.1.1. Elements of a good prompt
 All the prompts need to have the following elements:
 1. **Instructions** - It provides a task description or instructions for how the model should perform. 
 2. **Context** - The external information required to guide the model.
@@ -42,6 +42,11 @@ All the prompts need to have the following elements:
 
 This curated list dives deep into domain-specific prompts, empowering readers to leverage LLMs for a wide range of tasks across various industries. With this diverse set of prompts, anyone can tackle complex problems, generate innovative ideas, and unlock the hidden potential within these powerful language models.
 
-1. [Data Science](/_posts/llm_prompt_categories/datascience.md)
+1. [Data Science]()
+2. [Research/Academic Writing]()
+3. [Copywriting]()
+4. [Prompt Refinement/Engineering]()
+5. [Studying/Learning]()
+6. [Job Search/Interview Preparation]()
 
 🧑🏽‍💻 Thank you for reading this document. If you have any feedback or want to make an addition to the list of LLM prompts, you can email me at [amandeepsinghkhanna@gmail.com](mailto:amandeepsinghkhanna@gmail.com).
