@@ -13,7 +13,9 @@ plugins:
   - jekyll-relative-links
 permalink: '/:categories/:title/'
 paginate: 10
-
+jekyll-relative-links:
+  enabled: true
+  collections: true
 collections:
   posts:
     output: true
