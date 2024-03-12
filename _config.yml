@@ -10,6 +10,7 @@ sass:
   style: compressed
 plugins:
   - jekyll-paginate
+  - jekyll-relative-links
 permalink: '/:categories/:title/'
 paginate: 10
 
