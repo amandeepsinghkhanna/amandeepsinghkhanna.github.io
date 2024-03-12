@@ -15,6 +15,12 @@ permalink: '/:categories/:title/'
 paginate: 10
 
 collections:
+  posts:
+    output: true
+    permalink: '/:collection/:name/'
+  llm_prompt_categories:
+    output: true
+    permalink: '/:collection/:name/'
   teaching_notes:
     output: true
     permalink: '/:collection/:name/'
