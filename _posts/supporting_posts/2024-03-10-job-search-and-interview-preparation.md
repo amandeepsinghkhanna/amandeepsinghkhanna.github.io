@@ -13,7 +13,7 @@ description: "Struggling to get the most out of your LLM? Unleash its full poten
 
 - [1. Having the resume critiqued by a professional](#1-having-my-resume-critiqued-by-a-professional)
 - [2. Thank you email after an interview](#2-thank-you-email-after-an-interview)
-- [3. Following up after the interview]()
+- [3. Following up after the interview](#3-following-up-after-the-interview)
 
 ## 1. Having the resume critiqued by a professional
 
