@@ -1,0 +1,50 @@
+I"<p>Recent advances in generative AI are driving the revolution in artificial intelligence (AI). Large volumes of preexisting material, such blog posts, books, and photos, are used to train generative AI models. They are able to produce fresh text or visual material once they comprehend the underlying patterns. They are capable of producing text, creating images, summarizing text, and more.</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul>
+  <li><a href="#1-introduction-to-llms">1. Introduction to LLMs</a>
+    <ul>
+      <li><a href="#11-introduction-to-prompt-engineering">1.1. Introduction to prompt engineering</a>
+        <ul>
+          <li><a href="#111-elements-of-a-good-prompt">1.1.1. Elements of a good prompt</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#2-list-of-llm-prompts-by-domain">2. List of LLM prompts by domain</a></li>
+</ul>
+
+<h1 id="1-introduction-to-llms">1. Introduction to LLMs</h1>
+<p>One kind of generative AI model built on the transformer architecture is the large language model (LLM). This architecture helps them identify complex relationships between words, sentences, and paragraphs. They process input data, encode it, and then decode it to produce an output prediction. ChatGPT, Gemini and Microsoft &amp; GitHub copilots are all examples of LLMs.</p>
+
+<h2 id="11-introduction-to-prompt-engineering">1.1. Introduction to prompt engineering</h2>
+<p>Prompt engineering is a field that focuses on developing, designing and optimising prompts to enhance the outputs of the LLMs. It’s a way of guiding the model’s behaviour to get the desired outcome. Effective prompt engineering can help accomplish the following:</p>
+
+<ul>
+  <li>Augment the model with domain knowledge and external tools without changing model parameters or fine-tuning.</li>
+  <li>Boost a model’s abilities and improve safety.</li>
+  <li>Achieve better quality outputs through better quality inputs.</li>
+  <li>Interact with language models to grasp their full capabilities.</li>
+</ul>
+
+<h3 id="111-elements-of-a-good-prompt">1.1.1. Elements of a good prompt</h3>
+<p>All the prompts need to have the following elements:</p>
+<ol>
+  <li><strong>Instructions</strong> - It provides a task description or instructions for how the model should perform.</li>
+  <li><strong>Context</strong> - The external information required to guide the model.</li>
+  <li><strong>Input data</strong> - Input for which we want a response.</li>
+  <li><strong>Output indicator</strong> - Output type or format.</li>
+</ol>
+
+<h1 id="2-list-of-llm-prompts-by-domain">2. List of LLM prompts by domain</h1>
+
+<p>This curated list dives deep into domain-specific prompts, empowering readers to leverage LLMs for a wide range of tasks across various industries. With this diverse set of prompts, anyone can tackle complex problems, generate innovative ideas, and unlock the hidden potential within these powerful language models.</p>
+
+<!-- 1. [Research/Academic Writing]() -->
+<ol>
+  <li><a href="/job-search-and-interview-preparation">Job Search/Interview Preparation</a></li>
+</ol>
+
+<p>🧑🏽‍💻 Thank you for reading this document. If you have any feedback or want to make an addition to the list of LLM prompts, you can email me at <a href="mailto:amandeepsinghkhanna@gmail.com">amandeepsinghkhanna@gmail.com</a>.</p>
+:ET

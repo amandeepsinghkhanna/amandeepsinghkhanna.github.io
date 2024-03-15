@@ -6,6 +6,7 @@ description: "Amandeep Singh Khanna, Data Scientist at Tata Consultancy Services
 
 <div class="catalogue">
   {% for post in site.posts %}
+    {% if post.post_type == 'regular' %}
     <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
       <div>
         <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
@@ -17,5 +18,6 @@ description: "Amandeep Singh Khanna, Data Scientist at Tata Consultancy Services
 
       </div>
     </a>
+    {% endif %}
   {% endfor %}
 </div>

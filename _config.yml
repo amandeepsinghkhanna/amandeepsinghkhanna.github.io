@@ -10,16 +10,12 @@ sass:
   style: compressed
 plugins:
   - jekyll-paginate
-  - jekyll-relative-links
 permalink: '/:categories/:title/'
 paginate: 10
 jekyll-relative-links:
   enabled: true
   collections: true
 collections:
-  llm_prompt_categories:
-    output: true
-    permalink: '/:collection/:name/'
   teaching_notes:
     output: true
     permalink: '/:collection/:name/'
