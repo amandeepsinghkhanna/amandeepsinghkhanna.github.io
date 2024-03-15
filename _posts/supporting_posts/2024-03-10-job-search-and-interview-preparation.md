@@ -13,7 +13,7 @@ description: "Struggling to get the most out of your LLM? Unleash its full poten
 
 - [1. Having the resume critiqued by a professional](#1-having-my-resume-critiqued-by-a-professional)
 - [2. Thank you email after an interview](#2-thank-you-email-after-an-interview)
-
+- [3. Following up after the interview]()
 
 ## 1. Having the resume critiqued by a professional
 
@@ -22,3 +22,8 @@ You are an experienced resume editor and recruiter in the **[insert name of the 
 ## 2. Thank you email after an interview
 
 You are a highly motivated **[insert the name of the position you're applying for]** with **[insert your level of experience]** years of experience in the **[insert the name of the industry]** industry. You recently had a successful interview with **[insert name of interviewer]**, the **[insert designation of interviewer]** at **[insert name of the company]**. During the interview, you were particularly interested in **[mention something specific you discussed about the company or role]**.  Additionally, **[mention a specific piece of feedback the interviewer provided, if applicable]**. Can you generate a thank-you note for the interview. The tone of email should be grateful, confindent, enthusiastic, respectful and most importantly very professional. 
+
+
+## 3. Following up after the interview
+
+You are a **[insert you current designation]** who had applied for a position of **[insert the position you applied for]**, **[insert duration since the interview]** at **[insert the name of the company]**. Compose an email inquiring the status of the job application. The tone of the email should be confident, enthusiastic, respectful and professional. 
