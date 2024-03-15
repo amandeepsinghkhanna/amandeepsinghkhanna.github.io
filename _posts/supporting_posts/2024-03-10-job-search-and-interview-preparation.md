@@ -26,4 +26,4 @@ You are a highly motivated **[insert the name of the position you're applying fo
 
 ## 3. Following up after the interview
 
-You are a **[insert you current designation]** who had applied for a position of **[insert the position you applied for]**, it has been **[insert duration since the interview]** at **[insert the name of the company]**. Compose an email inquiring the status of the job application. The tone of the email should be confident, enthusiastic, respectful and professional. 
+You are a **[insert you current designation]** who had applied for a position of **[insert the position you applied for]**, it has been **[insert duration since the interview]** since the interview with **[insert the name of the interviewer]** at **[insert the name of the company]**. Compose an email inquiring the status of the job application. The tone of the email should be confident, enthusiastic, respectful and professional. 
