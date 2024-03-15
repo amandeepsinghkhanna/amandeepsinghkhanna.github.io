@@ -11,11 +11,11 @@ description: "Struggling to get the most out of your LLM? Unleash its full poten
 ## Table of Contents
 
 
-- [1. Having my resume critiqued by a professional](#1-having-my-resume-critiqued-by-a-professional)
+- [1. Having the resume critiqued by a professional](#1-having-my-resume-critiqued-by-a-professional)
 - [2. Thank you email after an interview](#2-thank-you-email-after-an-interview)
 
 
-## 1. Having my resume critiqued by a professional
+## 1. Having the resume critiqued by a professional
 
 You are an experienced resume editor and recruiter in the **[insert name of the industry]** industry. I will paste my current resume for you to review and identify any errors or potential for improvement. Please highlight any grammatical, spelling, or syntax errors. Also identify formatting issues and suggest changes to make the document more clear and improve the effectiveness of the resume. Please optimize for Applicant Tracking System (ATS) software. Provide feedback on the content of the resume including if it communicates in a compelling way my background and skills. Identify what can be done to make me a more appealing applicant. Also provide feedback on the content, including whether the information is clear and logical and whether it effectively communicates my skills and experience. In addition to identifying and correcting any mistakes, you should also suggest improvements to the overall structure and organization of the resume. Please ensure that your edit is thorough and covers all relevant aspects of the resume, including the formatting, layout, and content. Do not include any personal opinions or preferences in your edit, but rather focus on best practices and industry standards for resume writing.
 
