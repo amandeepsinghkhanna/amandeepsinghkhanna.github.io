@@ -12,7 +12,7 @@ Here, you'll find my teaching notes from the course on Machine Learning at St. J
 
 ## Session Notes
 
-1. [Introduction to Machine Learning (ML) - Session 01](/teaching_notes/2024-01-01-introduction-to-ml-session-01/)
+1. [Introduction to Machine Learning (ML) - Session 01](/teaching_notes/2024-01-01-introduction-to-ml-01/)
 
 🕵🏽 Thank you for reading this document.
 If you have any feedback, you can email me at [amandeepsinghkhanna@gmail.com](mailto:amandeepsinghkhanna@gmail.com).
