@@ -1,0 +1,79 @@
+# _config.yml
+title: Amandeep Singh Khanna
+description: >-
+  Personal portfolio and blog of Amandeep Singh Khanna, a Data Scientist based in Bangalore.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://amandeepsinghkhanna.github.io" # the base hostname & protocol for your site
+
+# Author/Personal Information
+author:
+  name: "Amandeep Singh Khanna"
+  title: "Data Scientist"
+  bio: "A results-oriented Data Scientist with 7+ years of experience designing data-driven solutions in marketing analytics, commercial effectiveness, and customer behavior prediction. Proven success leading impactful projects involving predictive modeling, marketing mix, and survival analysis. Generating over $25M in business value. Strong foundation in ML/AI, statistical modeling, and end-to-end productization of analytical systems. Adept at collaborating with stakeholders, mentoring teams, and deploying scalable solutions using tools like PySpark, SQL, and Databricks."
+  photo_url: "/assets/images/headshot.png" # Path to your image in the assets folder
+  resume_url: "/assets/pdfs/Amandeep Singh Khanna - Resume.pdf" # Add your resume link here
+
+# Skills
+skills:
+  - category: "Analytics"
+    items: ["Predictive Modeling", "Statistical Inference", "Causal Analysis", "Segmentation"]
+  - category: "Machine Learning"
+    items: ["XGBoost", "Random Forest", "Logistic Regression", "Neural Networks", "SVM", "NLP", "Time Series"]
+  - category: "Platforms"
+    items: ["Databricks", "Azure", "AWS", "MLFlow", "Snowflake", "PowerBI"]
+  - category: "Languages & Tools"
+    items: ["Python", "PySpark", "SQL", "R", "Git", "Streamlit", "MLOps"]
+
+# Work Experience
+experience:
+  - role: "Data Scientist"
+    company: "Fractal Analytics"
+    period: "Aug. 2022 – Present"
+    description: "Led key data science initiatives for CPG and retail clients, delivering substantial business value through advanced analytics and machine learning."
+    achievements:
+      - "Led fraud detection project for a CPG beverage client using DBSCAN clustering, saving ~$16M by identifying high-risk distributors."
+      - "Headed end-to-end design and deployment of Price Pack Architecture (PPA) optimization system, achieving $6M in cost savings."
+      - "Developed intricate time series models to compute baseline sales, enabling Trade Promotion Optimization (TPO) and adding $5M in incremental value."
+      - "Built a dynamic predictive SMS reminder system using survival analysis (Weibull distribution) to optimize customer reordering cadence and adding $2M increase in revenue."
+  - role: "Guest Faculty"
+    company: "St. Joseph’s University, Bangalore"
+    period: "Jun. 2020 – Present"
+    description: "Taught courses in Machine Learning, Power BI, and Research Methods. Mentored students in data science projects and academic research."
+  - role: "Data Scientist II"
+    company: "Syneos Health"
+    period: "Aug. 2021 – Jun. 2022"
+    description: "Partnered with omnichannel marketing teams to deliver commercial effectiveness and HCP segmentation strategies. Conducted promotional response analysis, market mix modeling, and campaign attribution using causal inference. Designed analytical frameworks for sales force effectiveness and patient referral behavior."
+  - role: "Data Scientist"
+    company: "Tata Consultancy Services (TCS)"
+    period: "Jun. 2018 – Aug. 2021"
+    description: "Delivered data-driven insights by managing full ML pipelines from data acquisition to predictive modeling. Designed classification/regression models for large-scale commercial analytics projects. Contributed to business development through POCs and RFIs; managed stakeholder communications and requirement gathering. Worked across multiple client engagements, ensuring quality delivery under tight deadlines."
+  - role: "Data Science Intern"
+    company: "Analytix Labs"
+    period: "May. 2018 – Jun. 2018"
+    description: "Built a classification model and real-time dashboard using Python-Flask to analyze unstructured customer feedback."
+  - role: "Data Science Intern"
+    company: "Tata Consultancy Services (TCS)"
+    period: "Nov. 2017 – May 2018"
+    description: "Built pre-processing pipelines for dashboards using Power BI, and Tibco Spotfire. Conducted R&D for valve stiction prediction for a global oil & gas firm."
+
+# Publications
+publications:
+  - title: "Comparative Study for Optimizing Sales through Media"
+    journal: "IEEE (2023)"
+  - title: "A Graph Neural Network Approach for Identification of Influencers and Micro-Influencers in a Social Network"
+    journal: "IEEE (2023)"
+
+# Education
+education:
+  - degree: "MSc. Big Data Analytics"
+    university: "St. Joseph’s University"
+    year: "May 2018"
+    notes: "Batch Valedictorian"
+  - degree: "BSc. Mathematics, Electronics & Computer Science (MEC)"
+    university: "St. Joseph’s University"
+    year: "May 2012"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed

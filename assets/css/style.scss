@@ -1,0 +1,385 @@
+---
+---
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Inter:wght@400;500;600;700&display=swap');
+
+// Variables
+$font-body: 'Inter', sans-serif;
+$font-heading: 'Lora', serif;
+$slate-900: #0F172A;
+$slate-800: #1E293B;
+$slate-700: #334155;
+$slate-600: #475569;
+$slate-500: #64748B;
+$slate-300: #CBD5E1;
+$slate-200: #E2E8F0;
+$slate-50: #F8FAFC;
+$white: #FFFFFF;
+
+// General Styles
+body {
+  font-family: $font-body;
+  background-color: $slate-50;
+  color: $slate-800;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+// Header
+.site-header {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid $slate-200;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .site-title {
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $slate-900;
+    text-decoration: none;
+  }
+
+  .nav-links a {
+    font-size: 1.125rem;
+    color: $slate-600;
+    text-decoration: none;
+    margin-left: 2rem;
+    padding-bottom: 0.25rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $slate-900;
+    }
+
+    &.active {
+      font-weight: 600;
+      color: $slate-900;
+      border-bottom: 2px solid $slate-800;
+    }
+  }
+}
+
+// Main Content
+main {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.section-title {
+  font-family: $font-heading;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $slate-800;
+  border-left: 4px solid $slate-500;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+// Home Page
+.home .intro-section {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+
+.home .intro-image {
+  flex-shrink: 0;
+  margin-right: 3rem;
+  text-align: center;
+}
+
+.home .profile-photo {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  border: 4px solid $white;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.home .name {
+  font-family: $font-heading;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.home .intro-text {
+  margin-top: -1.5rem;
+}
+
+.home .title {
+  font-size: 1.25rem;
+  color: $slate-600;
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: $slate-700;
+  color: $white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+  
+  i {
+    margin-right: 0.5rem;
+  }
+
+  &:hover {
+    background-color: $slate-800;
+  }
+}
+
+// Project & Blog Grid
+.project-grid, .post-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+.project-card, .post-card {
+  background: $white;
+  border: 1px solid $slate-200;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  }
+  
+  .card-content {
+    flex-grow: 1;
+  }
+
+  .card-title {
+    font-family: $font-heading;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+  }
+  
+  .card-description {
+    color: $slate-600;
+    margin-bottom: 1rem;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .read-more {
+    font-weight: 600;
+    color: $slate-600;
+    text-decoration: none;
+    &:hover { color: $slate-800; }
+  }
+  
+  .github-link {
+    color: $slate-500;
+    &:hover { color: $slate-800; }
+  }
+}
+
+// Post/Article Page
+.post-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $slate-200;
+}
+.post-title {
+  font-family: $font-heading;
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem;
+}
+.post-meta {
+  color: $slate-500;
+  margin-bottom: 0.5rem;
+}
+.post-content {
+  h3 {
+    font-family: $font-heading;
+    color: $slate-800;
+    margin-top: 2rem;
+  }
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: $slate-600;
+  text-decoration: none;
+  i { margin-right: 0.5rem; }
+  &:hover { color: $slate-900; }
+}
+
+// Footer
+.site-footer {
+  border-top: 1px solid $slate-200;
+  background: $white;
+  padding: 1.5rem 0;
+  text-align: center;
+  color: $slate-500;
+  p { margin: 0; }
+  .made-with { font-size: 0.875rem; margin-top: 0.5rem; }
+}
+
+// Skills Section
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.skill-card {
+  background: $white;
+  border: 1px solid $slate-200;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.skill-category {
+  font-family: $font-heading;
+  font-size: 1.125rem;
+  margin: 0 0 1rem;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background: $slate-200;
+  color: $slate-700;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+
+// Experience Timeline
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid $slate-300;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.05rem;
+  top: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  background: $white;
+  border: 2px solid $slate-500;
+  border-radius: 50%;
+}
+
+.job-title {
+  font-family: $font-heading;
+  font-size: 1.25rem;
+  margin: 0;
+  .company {
+    font-family: $font-body;
+    font-weight: 400;
+    color: $slate-600;
+  }
+}
+
+.period {
+  color: $slate-500;
+  font-size: 0.875rem;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.job-description {
+  margin-bottom: 0.75rem;
+}
+
+.achievements {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin: 0;
+  li {
+    margin-bottom: 0.25rem;
+  }
+}
+
+// Education & Publications
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.education-item, .publication-item {
+  margin-bottom: 1.5rem;
+}
+
+.degree, .pub-title {
+  font-family: $font-heading;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.university, .journal {
+  color: $slate-600;
+  margin: 0.25rem 0;
+}
+
+.notes {
+  font-style: italic;
+  color: $slate-500;
+  margin: 0;
+}

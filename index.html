@@ -1,0 +1,91 @@
+---
+layout: default
+title: Home
+---
+<div class="home">
+  <div class="intro-section">
+    <div class="intro-image">
+      <img src="{{ site.author.photo_url | relative_url }}" alt="{{ site.author.name }}, {{ site.author.title }} based in Bangalore" class="profile-photo">
+    </div>
+    <div class="intro-text">
+      <h1 class="name">{{ site.author.name }}</h1>
+      <p class="title">{{ site.author.title }}</p>
+      <a href="{{ site.author.resume_url }}" class="button" download>
+        <i data-lucide="download"></i> Download Resume
+      </a>
+    </div>
+  </div>
+
+  <section class="about-me">
+    <h2 class="section-title">About Me</h2>
+    <p>{{ site.author.bio }}</p>
+  </section>
+
+  <section class="skills">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-container">
+      {% for skill_group in site.skills %}
+        <div class="skill-card">
+          <h3 class="skill-category">{{ skill_group.category }}</h3>
+          <div class="skill-items">
+            {% for item in skill_group.items %}
+              <span class="skill-tag">{{ item }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="experience">
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="timeline">
+      {% for job in site.experience %}
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="job-title">{{ job.role }} <span class="company">at {{ job.company }}</span></h3>
+            <p class="period">{{ job.period }}</p>
+            <p class="job-description">{{ job.description }}</p>
+            {% if job.achievements %}
+              <ul class="achievements">
+                {% for achievement in job.achievements %}
+                  <li>{{ achievement }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <div class="grid-2-col">
+    <section class="education">
+      <h2 class="section-title">Education</h2>
+      <div class="education-container">
+        {% for edu in site.education %}
+          <div class="education-item">
+            <h3 class="degree">{{ edu.degree }}</h3>
+            <p class="university">{{ edu.university }}, {{ edu.year }}</p>
+            {% if edu.notes %}
+              <p class="notes">{{ edu.notes }}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="publications">
+      <h2 class="section-title">Publications</h2>
+      <div class="publications-container">
+        {% for pub in site.publications %}
+          <div class="publication-item">
+            <h3 class="pub-title">{{ pub.title }}</h3>
+            <p class="journal">{{ pub.journal }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</div>
