@@ -4,16 +4,62 @@ title: 404 - Page Not Found
 permalink: /404.html
 ---
 
-<div class="not-found-page">
-  <div class="not-found-content">
-    <h1 class="error-code">404</h1>
-    <h2 class="error-message">Data Not Found</h2>
-    <p class="error-description">
-      Oops! It seems this page has been lost in the data pipeline. My model predicted it would be here with 95% confidence, but we've found an anomaly.
-    </p>
-    <a href="{{ "/" | relative_url }}" class="button">
-      <i data-lucide="home"></i>
-      Return to a known data point
-    </a>
-  </div>
+<style>
+  .not-found-container {
+    text-align: center;
+    padding: 5rem 2rem;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+  }
+  .error-code {
+    font-size: 8rem;
+    font-weight: 800;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+  .error-message {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  .error-description {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  .home-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background-color: #007acc;
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  .home-button:hover {
+    background-color: #005f99;
+  }
+  .home-button svg {
+    margin-right: 0.5rem;
+  }
+</style>
+
+<div class="not-found-container">
+  <div class="error-code">404</div>
+  <div class="error-message">Prediction Error: Page Not Found</div>
+  <p class="error-description">
+    Our model had a 99% confidence that this page existed… turns out, it was overfitting.
+    The dataset you’re looking for might have been dropped, cleaned, or never collected in the first place.
+  </p>
+  <a href="{{ "/" | relative_url }}" class="home-button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+      <polyline points="9 22 9 12 15 12 15 22"></polyline>
+    </svg>
+    Back to Home
+  </a>
 </div>
