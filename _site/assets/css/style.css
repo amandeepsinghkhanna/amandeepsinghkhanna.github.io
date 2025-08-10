@@ -106,7 +106,15 @@ body {
         margin: 0;
         padding: 1rem 0;
         text-align: center;
-        border-bottom: none;
+        border-bottom: 1px solid $slate-200;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &.active {
+          border-bottom: 1px solid $slate-200;
+        }
       }
     }
 
