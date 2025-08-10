@@ -14,6 +14,7 @@ $slate-300: #CBD5E1;
 $slate-200: #E2E8F0;
 $slate-50: #F8FAFC;
 $white: #FFFFFF;
+$breakpoint-md: 768px;
 
 // General Styles
 body {
@@ -73,7 +74,45 @@ body {
       border-bottom: 2px solid $slate-800;
     }
   }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
 }
+
+// Responsive Navigation
+@media (max-width: $breakpoint-md) {
+  .site-header {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: white;
+      flex-direction: column;
+      padding: 1rem 0;
+      border-bottom: 1px solid $slate-200;
+      
+      a {
+        margin: 0.5rem 0;
+      }
+    }
+
+    .nav-links.nav-open {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+  }
+}
+
 
 // Main Content
 main {
@@ -121,10 +160,6 @@ main {
   font-size: 2.25rem;
   font-weight: 700;
   margin: 1.5rem 0 0.5rem;
-}
-
-.home .intro-text {
-  margin-top: -1.5rem;
 }
 
 .home .title {
