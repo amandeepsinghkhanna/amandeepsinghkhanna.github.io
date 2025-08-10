@@ -1,5 +1,13 @@
 <header class="site-header">
   <nav class="container">
     <a class="site-title" href="{{ "/" | relative_url }}">{{ site.author.name }}</a>
+    <div class="nav-links" id="nav-links">
+      <a href="{{ "/" | relative_url }}" class="{% if page.url == "/" %}active{% endif %}">Home/About</a>
+      <a href="{{ "/projects/" | relative_url }}" class="{% if page.url contains '/projects' %}active{% endif %}">Projects</a>
+      <a href="{{ "/blog/" | relative_url }}" class="{% if page.url contains '/blog' %}active{% endif %}">Blog</a>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu">
+      <i data-lucide="menu"></i>
+    </button>
   </nav>
 </header>
