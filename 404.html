@@ -9,13 +9,11 @@ permalink: /404.html
 
     /* Main Container for spacing and centering */
     .not-found-container {
-        /* min-height: 100vh; */ /* This was causing the large whitespace */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-top: 6.5rem;
-        padding-bottom: 8rem;
+        padding: 3rem 1rem; /* Default padding for mobile */
     }
 
     .not-found-wrapper {
@@ -85,6 +83,11 @@ permalink: /404.html
 
     /* Responsive Styles (for screens 768px and wider) */
     @media (min-width: 768px) {
+        .not-found-container {
+            padding-top: 6.5rem;
+            padding-bottom: 8rem;
+        }
+
         .not-found-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 4rem;
