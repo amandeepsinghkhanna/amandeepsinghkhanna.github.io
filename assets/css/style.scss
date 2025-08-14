@@ -76,7 +76,7 @@ body {
     &.active {
       font-weight: 600;
       color: $slate-900;
-      /* border-bottom: 2px solid $slate-800; */ /* This line was removed */
+      /* border-bottom: 2px solid $slate-800; */
     }
   }
 
@@ -193,6 +193,23 @@ main {
 
   &:hover {
     background-color: $slate-800;
+  }
+}
+
+// Social Links
+.social-links {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+
+  a {
+    color: $slate-500;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $slate-800;
+    }
   }
 }
 
