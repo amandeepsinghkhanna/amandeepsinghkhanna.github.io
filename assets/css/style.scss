@@ -14,6 +14,7 @@ $slate-300: #CBD5E1;
 $slate-200: #E2E8F0;
 $slate-50: #F8FAFC;
 $white: #FFFFFF;
+$indigo-600: #4f46e5;
 $breakpoint-md: 768px;
 
 // General Styles
@@ -186,7 +187,7 @@ main {
   border-radius: 0.5rem;
   transition: background-color 0.3s;
   
-  i {
+  i, svg {
     margin-right: 0.5rem;
   }
 
@@ -424,4 +425,90 @@ main {
   font-style: italic;
   color: $slate-500;
   margin: 0;
+}
+
+// 404 Page Styles
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem; // Default padding for mobile
+
+    .not-found-wrapper {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+    .not-found-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .not-found-text {
+        text-align: center;
+    }
+
+    .not-found-subtitle {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: $indigo-600;
+        margin-bottom: 0.5rem;
+    }
+
+    .not-found-title {
+        font-family: $font-heading;
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: $slate-900;
+        letter-spacing: -0.025em;
+        margin-bottom: 1rem;
+    }
+
+    .not-found-description {
+        color: $slate-600;
+        margin-bottom: 2rem;
+        max-width: 32rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .not-found-image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .not-found-image {
+        width: 100%;
+        max-width: 28rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+    }
+
+    @media (min-width: $breakpoint-md) {
+        padding-top: 6.5rem;
+        padding-bottom: 8rem;
+
+        .not-found-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 4rem;
+        }
+
+        .not-found-text {
+            text-align: left;
+        }
+
+        .not-found-title {
+            font-size: 3rem;
+        }
+        
+        .not-found-description {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
 }
