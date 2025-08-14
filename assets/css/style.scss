@@ -76,7 +76,7 @@ body {
     &.active {
       font-weight: 600;
       color: $slate-900;
-      border-bottom: 2px solid $slate-800;
+      /* border-bottom: 2px solid $slate-800; */ /* This line was removed */
     }
   }
 
