@@ -289,7 +289,7 @@ main {
     background: $white;
     border: 1px solid $slate-200;
     border-radius: 0.75rem;
-    display: flex; // Needed for the link child to fill the height
+    display: flex;
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 
     .card-link {
@@ -298,6 +298,7 @@ main {
       display: flex;
       flex-direction: column;
       height: 100%;
+      width: 100%;
       padding: 1.5rem;
     }
 
@@ -328,7 +329,6 @@ main {
 
     .project-tags {
       margin-top: auto;
-      padding-top: 1rem;
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
