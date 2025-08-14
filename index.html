@@ -2,6 +2,11 @@
 layout: default
 title: Home
 ---
+<!-- 
+  Note: Ensure your default layout includes an icon library like Font Awesome 
+  for the social icons to display correctly. 
+  Example: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+-->
 <div class="home">
   <div class="intro-section">
     <div class="intro-image">
@@ -11,8 +16,20 @@ title: Home
       <h1 class="name">{{ site.author.name }}</h1>
       <p class="title">{{ site.author.title }}</p>
       <a href="{{ site.author.resume_url }}" class="button" download>
-      Download Resume
+        Download Resume
       </a>
+      <!-- Social Links Section -->
+      <div class="social-links">
+        <a href="https://github.com/your-username" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/your-username" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://twitter.com/your-username" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -85,5 +102,3 @@ title: Home
       </div>
     </section>
   </div>
-
-
