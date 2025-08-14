@@ -196,19 +196,27 @@ main {
   }
 }
 
-// Social Links
-.social-links {
-  margin-top: 1.5rem;
+.action-row {
+  margin-top: 2rem;
   display: flex;
+  align-items: center;
   gap: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 
   a {
     color: $slate-500;
     font-size: 1.5rem;
-    transition: color 0.3s;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
 
     &:hover {
-      color: $slate-800;
+      color: $slate-900;
+      transform: translateY(-2px);
     }
   }
 }
