@@ -14,7 +14,7 @@ $slate-300: #CBD5E1;
 $slate-200: #E2E8F0;
 $slate-50: #F8FAFC;
 $white: #FFFFFF;
-$indigo-600: #4f46e5;
+// $indigo-600: #4f46e5; // Removed this color
 $breakpoint-md: 768px;
 
 // General Styles
@@ -544,7 +544,7 @@ main {
     .not-found-subtitle {
         font-size: 1.125rem;
         font-weight: 600;
-        color: $indigo-600;
+        color: $slate-600;
         margin-bottom: 0.5rem;
     }
 
