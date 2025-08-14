@@ -5,18 +5,10 @@ permalink: /404.html
 ---
 
 <style>
-    /* Basic Reset & Body Styles */
-    body, html {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Inter', sans-serif;
-        background-color: #f8fafc; /* slate-50 */
-        color: #1e293b; /* slate-800 */
-    }
+    /* 404 Page-Specific Styles */
 
-    /* Main Container */
-    .error-404-container {
+    /* Main Container for vertical centering */
+    .not-found-container {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
@@ -25,138 +17,114 @@ permalink: /404.html
         padding: 1rem;
     }
 
-    .content-wrapper {
+    .not-found-wrapper {
         width: 100%;
-        max-width: 80rem; /* max-w-5xl */
+        max-width: 80rem;
         margin: 0 auto;
     }
 
-    /* Grid Layout */
-    .grid-container {
+    /* Grid Layout for the two columns */
+    .not-found-grid {
         display: grid;
         grid-template-columns: 1fr; /* Default to single column */
         align-items: center;
-        gap: 2rem; /* gap-8 */
+        gap: 2rem;
     }
 
     /* Text Content Section */
-    .text-content {
+    .not-found-text {
         text-align: center;
     }
 
-    .error-subtitle {
-        font-size: 1.125rem; /* text-lg */
-        font-weight: 600; /* font-semibold */
-        color: #4f46e5; /* text-indigo-600 */
-        margin-bottom: 0.5rem; /* mb-2 */
+    .not-found-subtitle {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #4f46e5; /* A distinct color for the subtitle */
+        margin-bottom: 0.5rem;
     }
 
-    .error-title {
+    .not-found-title {
         font-family: 'Lora', serif; /* Using Lora for the main title */
-        font-size: 2.25rem; /* text-4xl */
-        font-weight: 700; /* font-bold from Lora */
-        color: #0f172a; /* text-slate-900 */
-        letter-spacing: -0.025em; /* tracking-tight */
-        margin-bottom: 1rem; /* mb-4 */
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: #0f172a;
+        letter-spacing: -0.025em;
+        margin-bottom: 1rem;
     }
 
-    .error-description {
-        color: #475569; /* text-slate-600 */
-        margin-bottom: 2rem; /* mb-8 */
-        max-width: 32rem; /* max-w-lg */
+    .not-found-description {
+        color: #475569;
+        margin-bottom: 2rem;
+        max-width: 32rem;
         margin-left: auto;
         margin-right: auto;
         line-height: 1.6;
     }
 
-    /* Home Button */
-    .home-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.75rem 1.5rem; /* px-6 py-3 */
-        background-color: #1e293b; /* bg-slate-800 */
-        color: white;
-        font-weight: 600; /* font-semibold */
-        border-radius: 0.5rem; /* rounded-lg */
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
-        text-decoration: none;
-        transition: background-color 0.2s ease-in-out;
-    }
-
-    .home-button:hover {
-        background-color: #334155; /* hover:bg-slate-700 */
-    }
-
-    .home-button:focus {
-         outline: 2px solid transparent;
-         outline-offset: 2px;
-         box-shadow: 0 0 0 2px #64748b, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    }
-
-    .home-button-icon {
-        height: 1.25rem; /* h-5 */
-        width: 1.25rem; /* w-5 */
-        margin-right: 0.5rem; /* mr-2 */
+    /* SVG icon inside the button */
+    .button > svg {
+        margin-right: 0.5rem;
+        height: 1.25rem; 
+        width: 1.25rem; 
     }
 
     /* Image Section */
-    .image-container {
+    .not-found-image-container {
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .error-image {
+    .not-found-image {
         width: 100%;
-        max-width: 28rem; /* max-w-md */
-        border-radius: 0.5rem; /* rounded-lg */
-        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); /* shadow-xl */
+        max-width: 28rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     }
 
     /* Responsive Styles (for screens 768px and wider) */
     @media (min-width: 768px) {
-        .grid-container {
-            grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
-            gap: 4rem; /* md:gap-16 */
+        .not-found-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 4rem;
         }
 
-        .text-content {
-            text-align: left; /* md:text-left */
+        .not-found-text {
+            text-align: left;
         }
 
-        .error-title {
-            font-size: 3rem; /* md:text-5xl */
+        .not-found-title {
+            font-size: 3rem;
         }
         
-        .error-description {
-            margin-left: 0; /* md:mx-0 */
-            margin-right: 0; /* md:mx-0 */
+        .not-found-description {
+            margin-left: 0;
+            margin-right: 0;
         }
     }
 </style>
-<!-- Google Fonts need to be in your main layout file's <head> -->
+<!-- Note: Ensure your default.html layout includes the Google Fonts link -->
 <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@700&display=swap" rel="stylesheet"> -->
 
 
-<div class="error-404-container">
-    <div class="content-wrapper">
+<div class="not-found-container">
+    <div class="not-found-wrapper">
         
-        <div class="grid-container">
+        <div class="not-found-grid">
 
             <!-- Text Content Section -->
-            <div class="text-content">
-                <p class="error-subtitle">Error 404</p>
-                <h1 class="error-title">
+            <div class="not-found-text">
+                <p class="not-found-subtitle">Error 404</p>
+                <h1 class="not-found-title">
                     Prediction Error: Page Not Found
                 </h1>
-                <p class="error-description">
+                <p class="not-found-description">
                     Our model had a 99% confidence that this page existed… turns out, it was overfitting. The dataset you’re looking for might have been dropped, cleaned, or never collected in the first place.
                 </p>
                 
-                <!-- Home Button -->
-                <a href="{{ "/" | relative_url }}" class="home-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="home-button-icon" viewBox="0 0 20 20" fill="currentColor">
+                <!-- Home Button using the .button class from your styles.scss -->
+                <a href="{{ "/" | relative_url }}" class="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                     </svg>
                     Back to Home
@@ -164,10 +132,10 @@ permalink: /404.html
             </div>
 
             <!-- Image Section -->
-            <div class="image-container">
+            <div class="not-found-image-container">
                 <img src="/assets/images/error404.png" 
                      alt="Scientists in a lab with a computer showing an error" 
-                     class="error-image"
+                     class="not-found-image"
                      onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/475569?text=Image+Not+Found';">
             </div>
 
