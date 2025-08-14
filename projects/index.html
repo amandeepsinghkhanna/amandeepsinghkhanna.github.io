@@ -1,0 +1,25 @@
+---
+layout: default
+title: Projects
+---
+<div class="archive-page">
+  <h1 class="page-title">Projects</h1>
+  <p class="page-description">A selection of my work in data science and machine learning.</p>
+  
+  <div class="project-grid" id="project-grid">
+    {% for project in site.projects reversed %}
+      <div class="project-card">
+        <div class="card-content">
+          <h3 class="card-title">{{ project.title }}</h3>
+          <p class="card-description">{{ project.description }}</p>
+        </div>
+        <div class="card-footer">
+          <a href="{{ project.url | relative_url }}" class="read-more">Read More &rarr;</a>
+          <a href="{{ project.githubUrl }}" target="_blank" rel="noopener noreferrer" class="github-link">
+            <i data-lucide="github"></i>
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
