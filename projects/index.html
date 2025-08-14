@@ -1,25 +1,94 @@
 ---
 layout: default
 title: Projects
+permalink: /projects/
 ---
-<div class="archive-page">
-  <h1 class="page-title">Projects</h1>
-  <p class="page-description">A selection of my work in data science and machine learning.</p>
-  
-  <div class="project-grid" id="project-grid">
-    {% for project in site.projects reversed %}
+
+<div class="container projects-page">
+  <main>
+    <header class="page-header">
+      <h1>Projects</h1>
+      <p>A selection of my work in data science and machine learning.</p>
+    </header>
+
+    <div class="search-container">
+      <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input type="text" id="project-search" class="search-input" placeholder="Search projects by title, keyword, or technology...">
+    </div>
+
+    <div class="project-grid" id="project-grid">
+
+      <!-- Project Card 1 -->
       <div class="project-card">
         <div class="card-content">
-          <h3 class="card-title">{{ project.title }}</h3>
-          <p class="card-description">{{ project.description }}</p>
+          <h3 class="card-title">Real-time Fraud Detection System</h3>
+          <p class="card-description">
+            A deep learning model that analyzes transaction patterns in real-time to detect and prevent fraudulent activities, reducing financial loss by 25%.
+          </p>
         </div>
-        <div class="card-footer">
-          <a href="{{ project.url | relative_url }}" class="read-more">Read More &rarr;</a>
-          <a href="{{ project.githubUrl }}" target="_blank" rel="noopener noreferrer" class="github-link">
-            <i data-lucide="github"></i>
-          </a>
+        <div class="project-tags">
+          <span class="project-tag">Deep Learning</span>
+          <span class="project-tag">FinTech</span>
+          <span class="project-tag">Real-time</span>
+          <span class="project-tag">Python</span>
         </div>
       </div>
-    {% endfor %}
-  </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card">
+        <div class="card-content">
+          <h3 class="card-title">Customer Churn Prediction Model</h3>
+          <p class="card-description">
+            Utilized XGBoost and survival analysis to predict customer churn, enabling proactive retention strategies and increasing customer lifetime value.
+          </p>
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">Machine Learning</span>
+          <span class="project-tag">XGBoost</span>
+          <span class="project-tag">Marketing</span>
+          <span class="project-tag">Python</span>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="project-card">
+        <div class="card-content">
+          <h3 class="card-title">NLP-Powered Sentiment Analysis Engine</h3>
+          <p class="card-description">
+            Built a sentiment analysis tool for social media monitoring using BERT, providing brands with insights into public perception.
+          </p>
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">NLP</span>
+          <span class="project-tag">BERT</span>
+          <span class="project-tag">Social Media</span>
+          <span class="project-tag">SaaS</span>
+        </div>
+      </div>
+
+      <!-- Add more project cards here as needed -->
+
+    </div>
+  </main>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('project-search');
+    const projectGrid = document.getElementById('project-grid');
+    const projects = Array.from(projectGrid.getElementsByClassName('project-card'));
+
+    searchInput.addEventListener('input', function(e) {
+      const searchTerm = e.target.value.toLowerCase();
+
+      projects.forEach(function(project) {
+        const projectText = project.textContent.toLowerCase();
+        if (projectText.includes(searchTerm)) {
+          project.style.display = 'flex';
+        } else {
+          project.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
