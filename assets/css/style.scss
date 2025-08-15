@@ -84,7 +84,6 @@ body {
     border: none;
     cursor: pointer;
     padding: 0.5rem;
-    margin-bottom: 3em;
   }
 }
 
@@ -276,7 +275,7 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    align-items: stretch; // Ensures cards in a row have the same height
+    align-items: stretch; 
     
     @media (min-width: 640px) {
       grid-template-columns: repeat(2, 1fr);
@@ -290,7 +289,8 @@ main {
     background: $white;
     border: 1px solid $slate-200;
     border-radius: 0.75rem;
-    display: flex; // Keep flex for the link to fill the card
+    display: flex;
+    flex-direction: column; // Set direction for the card itself
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 
     .card-link {
@@ -298,8 +298,7 @@ main {
       color: inherit;
       display: flex;
       flex-direction: column;
-      height: 100%;
-      width: 100%;
+      flex-grow: 1; // Allow the link to grow and fill the card
       padding: 1.5rem;
     }
 
@@ -310,7 +309,7 @@ main {
     }
     
     .card-content {
-      flex-grow: 1; // Allows this section to push the tags down
+      flex-grow: 1; 
     }
 
     .card-title {
@@ -329,7 +328,6 @@ main {
     }
 
     .project-tags {
-      // margin-top: auto; // This was part of the problem
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
@@ -602,4 +600,3 @@ main {
         }
     }
 }
-
