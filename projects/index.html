@@ -18,63 +18,65 @@ permalink: /projects/
 
     <div class="project-grid" id="project-grid">
 
-      <!-- Project Card 1 -->
-      <div class="project-card" data-search-terms="real-time fraud detection system deep learning fintech python">
-        <a href="#" class="card-link" aria-label="View project: Real-time Fraud Detection System">
-          <div class="card-content">
-            <h3 class="card-title">Real-time Fraud Detection System</h3>
-            <p class="card-description">
-              A deep learning model that analyzes transaction patterns in real-time to detect and prevent fraudulent activities, reducing financial loss by 25%.
-            </p>
+      <!--
+        Jekyll will generate project cards here.
+        Make sure your projects are in the _posts folder
+        and have 'category: projects' in their front matter.
+      -->
+      {% for post in paginator.posts %}
+        {% if post.categories contains "projects" %}
+          <div class="project-card" data-search-terms="{{ post.title | downcase }} {{ post.tags | join: ' ' | downcase }}">
+            <a href="{{ post.url | relative_url }}" class="card-link" aria-label="View project: {{ post.title }}">
+              <div class="card-content">
+                <h3 class="card-title">{{ post.title }}</h3>
+                <p class="card-description">
+                  {{ post.description }}
+                </p>
+              </div>
+              {% if post.tags.size > 0 %}
+              <div class="project-tags">
+                {% for tag in post.tags %}
+                  <span class="project-tag">{{ tag }}</span>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </a>
           </div>
-          <div class="project-tags">
-            <span class="project-tag">Deep Learning</span>
-            <span class="project-tag">FinTech</span>
-            <span class="project-tag">Real-time</span>
-            <span class="project-tag">Python</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Project Card 2 -->
-      <div class="project-card" data-search-terms="customer churn prediction model machine learning xgboost marketing python">
-        <a href="#" class="card-link" aria-label="View project: Customer Churn Prediction Model">
-          <div class="card-content">
-            <h3 class="card-title">Customer Churn Prediction Model</h3>
-            <p class="card-description">
-              Utilized XGBoost and survival analysis to predict customer churn, enabling proactive retention strategies and increasing customer lifetime value.
-            </p>
-          </div>
-          <div class="project-tags">
-            <span class="project-tag">Machine Learning</span>
-            <span class="project-tag">XGBoost</span>
-            <span class="project-tag">Marketing</span>
-            <span class="project-tag">Python</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Project Card 3 -->
-      <div class="project-card" data-search-terms="nlp-powered sentiment analysis engine nlp bert social media saas">
-        <a href="#" class="card-link" aria-label="View project: NLP-Powered Sentiment Analysis Engine">
-          <div class="card-content">
-            <h3 class="card-title">NLP-Powered Sentiment Analysis Engine</h3>
-            <p class="card-description">
-              Built a sentiment analysis tool for social media monitoring using BERT, providing brands with insights into public perception.
-            </p>
-          </div>
-          <div class="project-tags">
-            <span class="project-tag">NLP</span>
-            <span class="project-tag">BERT</span>
-            <span class="project-tag">Social Media</span>
-            <span class="project-tag">SaaS</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Add more project cards here as needed -->
+        {% endif %}
+      {% endfor %}
 
     </div>
+
+    <!-- Pagination Links -->
+    {% if paginator.total_pages > 1 %}
+    <nav class="pagination">
+      <!-- Previous Page Link -->
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-link prev">Previous</a>
+      {% else %}
+        <span class="pagination-link disabled prev">Previous</span>
+      {% endif %}
+
+      <!-- Page Number Links -->
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <span class="pagination-link active">{{ page }}</span>
+        {% elsif page == 1 %}
+          <a href="{{ '/projects/' | relative_url }}" class="pagination-link">{{ page }}</a>
+        {% else %}
+          <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}" class="pagination-link">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+
+      <!-- Next Page Link -->
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-link next">Next</a>
+      {% else %}
+        <span class="pagination-link disabled next">Next</span>
+      {% endif %}
+    </nav>
+    {% endif %}
+
   </main>
 </div>
 
@@ -84,6 +86,7 @@ permalink: /projects/
     const projectGrid = document.getElementById('project-grid');
     const projects = Array.from(projectGrid.getElementsByClassName('project-card'));
 
+    // Note: This search only works for projects on the CURRENT page.
     searchInput.addEventListener('input', function(e) {
       const searchTerm = e.target.value.toLowerCase();
 
