@@ -257,6 +257,7 @@ main {
 
   .search-input {
     width: 100%;
+    box-sizing: border-box; // This is the fix
     padding: 0.75rem 1rem 0.75rem 3rem;
     font-size: 1rem;
     border: 1px solid $slate-300;
@@ -290,7 +291,7 @@ main {
     border: 1px solid $slate-200;
     border-radius: 0.75rem;
     display: flex;
-    flex-direction: column; // Set direction for the card itself
+    flex-direction: column; 
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 
     .card-link {
@@ -298,7 +299,7 @@ main {
       color: inherit;
       display: flex;
       flex-direction: column;
-      flex-grow: 1; // Allow the link to grow and fill the card
+      flex-grow: 1; 
       padding: 1.5rem;
     }
 
