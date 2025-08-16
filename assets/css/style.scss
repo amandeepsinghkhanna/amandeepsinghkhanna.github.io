@@ -1,3 +1,5 @@
+---
+---
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Inter:wght@400;500;600;700&display=swap');
 
 // Variables
@@ -116,6 +118,7 @@ body {
     }
   }
 }
+
 
 // Main Content
 main {
@@ -342,6 +345,7 @@ main {
   }
 }
 
+
 // Post/Article Page
 .post-header {
   margin-bottom: 2rem;
@@ -422,6 +426,7 @@ main {
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
 }
+
 
 // Experience Timeline
 .timeline {
@@ -569,17 +574,27 @@ main {
     .not-found-image {
         width: 100%;
         max-width: 28rem;
-        height: auto;
+        border-radius: 0.5rem;
+        box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
     }
 
     @media (min-width: $breakpoint-md) {
+        padding-top: 6.5rem;
+        padding-bottom: 8rem;
+
         .not-found-grid {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 4rem;
         }
+
         .not-found-text {
             text-align: left;
         }
+
+        .not-found-title {
+            font-size: 3rem;
+        }
+        
         .not-found-description {
             margin-left: 0;
             margin-right: 0;
