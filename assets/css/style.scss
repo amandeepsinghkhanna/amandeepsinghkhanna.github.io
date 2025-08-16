@@ -566,3 +566,23 @@ main {
         justify-content: center;
     }
 
+    .not-found-image {
+        width: 100%;
+        max-width: 28rem;
+        height: auto;
+    }
+
+    @media (min-width: $breakpoint-md) {
+        .not-found-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        .not-found-text {
+            text-align: left;
+        }
+        .not-found-description {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
