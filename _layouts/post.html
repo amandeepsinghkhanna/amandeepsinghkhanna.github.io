@@ -2,9 +2,9 @@
 layout: default
 ---
 <article class="post">
-  <a href="{% if page.collection == 'projects' %}{{ '/projects/' | relative_url }}{% else %}{{ '/blog/' | relative_url }}{% endif %}" class="back-link">
+  <a href="{% if page.categories contains 'projects' %}{{ '/projects/' | relative_url }}{% else %}{{ '/blog/' | relative_url }}{% endif %}" class="back-link">
     <i data-lucide="arrow-left"></i>
-    Back to {% if page.collection == 'projects' %}Projects{% else %}Blog{% endif %}
+    Back to {% if page.categories contains 'projects' %}Projects{% else %}Blog{% endif %}
   </a>
   
   <header class="post-header">
