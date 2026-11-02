@@ -361,11 +361,32 @@ main {
   color: $slate-500;
   margin-bottom: 0.5rem;
 }
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.tag {
+  background-color: $slate-200;
+  color: $slate-700;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
 .post-content {
   h3 {
     font-family: $font-heading;
     color: $slate-800;
     margin-top: 2rem;
+  }
+  a {
+    color: $slate-900;
+    font-weight: 600;
+  }
+  li {
+    margin-bottom: 0.5rem;
   }
 }
 .back-link {
